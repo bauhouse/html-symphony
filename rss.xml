@@ -6,7 +6,7 @@
     <description>Symphony CMS Feed</description>
     <language>en-us</language>
     <generator>Symphony (build 2.3.1)</generator>
-    <atom:link href="http://example.com/rss/index.xml" rel="self" type="application/rss+xml"/>
+    <atom:link href="http://example.com/rss.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>A primer to Symphony 2's default theme</title>
       <link>http://example.com/articles/a-primer-to-symphony-2s-default-theme/</link>
