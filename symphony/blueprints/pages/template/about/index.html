@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../../../assets/css/symphony.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../../../assets/css/symphony.legacy.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../../../assets/css/symphony.grids.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../../../assets/css/symphony.frames.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../../../assets/css/symphony.forms.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../../../assets/css/symphony.tables.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../../../assets/css/symphony.drawers.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../../../assets/css/symphony.tabs.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../../../assets/css/symphony.notices.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../../../assets/css/admin.css">
+		<script type="text/javascript" src="../../../../assets/js/jquery.js"></script>
+		<script type="text/javascript" src="../../../../assets/js/symphony.js"></script>
+		<script type="text/javascript" src="../../../../assets/js/symphony.collapsible.js"></script>
+		<script type="text/javascript" src="../../../../assets/js/symphony.orderable.js"></script>
+		<script type="text/javascript" src="../../../../assets/js/symphony.selectable.js"></script>
+		<script type="text/javascript" src="../../../../assets/js/symphony.duplicator.js"></script>
+		<script type="text/javascript" src="../../../../assets/js/symphony.tags.js"></script>
+		<script type="text/javascript" src="../../../../assets/js/symphony.pickable.js"></script>
+		<script type="text/javascript" src="../../../../assets/js/symphony.timeago.js"></script>
+		<script type="text/javascript" src="../../../../assets/js/symphony.notify.js"></script>
+		<script type="text/javascript" src="../../../../assets/js/symphony.drawer.js"></script>
+		<script type="text/javascript" src="../../../../assets/js/admin.js"></script>
+		<script type="text/javascript">Symphony.Context.add('env', {"page-namespace":"\/blueprints\/pages","0":"template","1":"about"}); Symphony.Context.add('root', 'http://home/sym/symphony-2');</script>
+		<title>about.xsl &ndash; Pages &ndash; Symphony</title>
+	</head>
+	<body id="blueprints-pages" class="template about single">
+		<div id="wrapper">
+			<header id="header">
+				<p class="notice">Your Symphony installation is up to date, but the installer was still detected. For security reasons, it should be removed. <a href="#remove">Remove installer?</a></p>
+				<h1>
+					<a href="../../../../../">Symphony CMS</a>
+				</h1>
+				<ul id="session">
+					<li>
+						<a href="../../../../system/authors/edit/1/" data-id="1" data-name="John" data-type="developer">John Smith</a>
+					</li>
+					<li>
+						<a href="../../../../../" accesskey="l">Log out</a>
+					</li>
+				</ul>
+				<nav id="nav">
+					<ul class="content">
+						<li>Content
+							<ul>
+								<li>
+									<a href="../../../../publish/articles/">Articles</a>
+								</li>
+								<li>
+									<a href="../../../../publish/categories/">Categories</a>
+								</li>
+								<li>
+									<a href="../../../../publish/notes/">Notes</a>
+								</li>
+								<li>
+									<a href="../../../../publish/comments/">Comments</a>
+								</li>
+								<li>
+									<a href="../../../../publish/messages/">Messages</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="structure">
+						<li class="active">Blueprints
+							<ul>
+								<li>
+									<a href="../../../../blueprints/pages/">Pages</a>
+								</li>
+								<li>
+									<a href="../../../../blueprints/sections/">Sections</a>
+								</li>
+								<li>
+									<a href="../../../../blueprints/datasources/">Data Sources</a>
+								</li>
+								<li>
+									<a href="../../../../blueprints/events/">Events</a>
+								</li>
+								<li>
+									<a href="../../../../blueprints/utilities/">Utilities</a>
+								</li>
+							</ul>
+						</li>
+						<li>System
+							<ul>
+								<li>
+									<a href="../../../../system/authors/">Authors</a>
+								</li>
+								<li>
+									<a href="../../../../system/preferences/">Preferences</a>
+								</li>
+								<li>
+									<a href="../../../../system/extensions/">Extensions</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</header>
+			<div id="context">
+				<div id="breadcrumbs">
+					<nav>
+						<p>
+							<a href="../../../../blueprints/pages/">Pages</a>
+							<span class="sep">&#8250;</span>
+							<a href="../../../../blueprints/pages/?parent=66">About</a>
+							<span class="sep">&#8250;</span>
+						</p>
+					</nav>
+					<h2>about.xsl</h2>
+				</div>
+				<ul class="actions">
+					<li><a href="../../../../blueprints/pages/edit/66/" title="Edit Page Configuration" class="button" accesskey="t">Edit Page</a></li>
+				</ul>
+			</div>
+			<div id="contents">
+				<form action="../../../../blueprints/pages/template/about/" method="post" class="two columns">
+					<fieldset class="primary column">
+						<label>Body
+							<textarea name="fields[body]" rows="30" cols="80" class="code">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;xsl:stylesheet version=&quot;1.0&quot; xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot;&gt;
+
+&lt;xsl:import href=&quot;../utilities/master.xsl&quot;/&gt;
+
+&lt;xsl:template match=&quot;data&quot;&gt;
+	&lt;h3&gt;Biography&lt;/h3&gt;
+	&lt;h2&gt;
+		&lt;xsl:value-of select=&quot;website-owner/author/name&quot;/&gt;
+		&lt;xsl:text&gt; is a professional space monkey extraordinaire&lt;/xsl:text&gt;
+	&lt;/h2&gt;
+	&lt;p&gt;&lt;em&gt;&lt;xsl:value-of select=&quot;$website-name&quot;/&gt;&lt;/em&gt; is running off a freshly installed copy of &lt;a href=&quot;http://getsymphony.com&quot;&gt;Symphony CMS&lt;/a&gt;.&lt;/p&gt;
+	&lt;p&gt;Be sure to check back regularly as the site transforms from &lt;em&gt;fresh prince&lt;/em&gt; to &lt;em&gt;whizz-bang candy steak&lt;/em&gt;.&lt;/p&gt;
+	&lt;hr/&gt;
+	&lt;h3&gt;Contact Me&lt;/h3&gt;
+	&lt;div id=&quot;guideline&quot;&gt;
+		&lt;h4&gt;Notes&lt;/h4&gt;
+		&lt;ul&gt;
+			&lt;li&gt;It's preferred to use the contact form rather than email. There is always a chance for emails to be picked up as spam.&lt;/li&gt;
+			&lt;li&gt;I will generally reply to messages within 24 hours unless I am horribly swamped.&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/div&gt;
+	&lt;form action=&quot;&quot; method=&quot;post&quot;&gt;
+		&lt;xsl:for-each select=&quot;events/save-message&quot;&gt;
+			&lt;p class=&quot;{@result}&quot;&gt;
+				&lt;xsl:choose&gt;
+					&lt;xsl:when test=&quot;@result = 'error'&quot;&gt;The system encountered errors while sending your email. Please check if all the required fields have been filled.&lt;/xsl:when&gt;
+					&lt;xsl:when test=&quot;filter/@status = 'failed'&quot;&gt;
+						&lt;xsl:attribute name=&quot;class&quot;&gt;error&lt;/xsl:attribute&gt;
+						&lt;xsl:text&gt;The system encountered technical problems while sending your email.&lt;/xsl:text&gt;
+					&lt;/xsl:when&gt;
+					&lt;xsl:otherwise&gt;Email sent.&lt;/xsl:otherwise&gt;
+				&lt;/xsl:choose&gt;
+			&lt;/p&gt;
+		&lt;/xsl:for-each&gt;
+		&lt;fieldset&gt;
+			&lt;label class=&quot;required&quot;&gt;Name &lt;input type=&quot;text&quot; name=&quot;fields[name]&quot; value=&quot;{events/save-message/post-values/name}&quot; /&gt;&lt;/label&gt;
+			&lt;label class=&quot;required&quot;&gt;Email &lt;input type=&quot;text&quot; name=&quot;fields[email]&quot; value=&quot;{events/save-message/post-values/email}&quot; /&gt;&lt;/label&gt;
+			&lt;label class=&quot;required&quot;&gt;Subject
+				&lt;xsl:choose&gt;
+					&lt;xsl:when test=&quot;events/save-message/post-values/subject&quot;&gt;
+						&lt;input type=&quot;text&quot; name=&quot;fields[subject]&quot; value=&quot;{events/save-message/post-values/subject}&quot; /&gt;
+					&lt;/xsl:when&gt;
+					&lt;xsl:otherwise&gt;
+						&lt;input type=&quot;text&quot; name=&quot;fields[subject]&quot; value=&quot;General Enquiry&quot; /&gt;
+					&lt;/xsl:otherwise&gt;
+				&lt;/xsl:choose&gt;
+			&lt;/label&gt;
+			&lt;label&gt;Message &lt;textarea name=&quot;fields[message]&quot; rows=&quot;5&quot; cols=&quot;21&quot;&gt;&lt;xsl:value-of select=&quot;events/save-message/post-values/message&quot; /&gt;&lt;/textarea&gt;&lt;/label&gt;
+			&lt;input name=&quot;send-email[recipient]&quot; value=&quot;{website-owner/author/username}&quot; type=&quot;hidden&quot; /&gt;
+			&lt;input name=&quot;send-email[reply-to-email]&quot; value=&quot;fields[email]&quot; type=&quot;hidden&quot; /&gt;
+			&lt;input name=&quot;send-email[reply-to-name]&quot; value=&quot;fields[name]&quot; type=&quot;hidden&quot; /&gt;
+			&lt;input name=&quot;send-email[subject]&quot; value=&quot;fields[subject]&quot; type=&quot;hidden&quot; /&gt;
+			&lt;input name=&quot;send-email[body]&quot; value=&quot;fields[message],fields[subject],fields[email],fields[name]&quot; type=&quot;hidden&quot; /&gt;
+			&lt;input id=&quot;submit&quot; type=&quot;submit&quot; name=&quot;action[save-message]&quot; value=&quot;Send&quot; /&gt;
+		&lt;/fieldset&gt;
+	&lt;/form&gt;
+&lt;/xsl:template&gt;
+
+&lt;/xsl:stylesheet&gt;</textarea>
+						</label>
+					</fieldset>
+					<div class="secondary column">
+						<p class="label">Utilities</p>
+						<div class="frame">
+							<ul id="utilities">
+								<li>
+									<a href="../../../../blueprints/utilities/edit/date-time/">date-time.xsl</a>
+								</li>
+								<li>
+									<a href="../../../../blueprints/utilities/edit/get-archive/">get-archive.xsl</a>
+								</li>
+								<li>
+									<a href="../../../../blueprints/utilities/edit/get-article/">get-article.xsl</a>
+								</li>
+								<li>
+									<a href="../../../../blueprints/utilities/edit/get-comments/">get-comments.xsl</a>
+								</li>
+								<li>
+									<a href="../../../../blueprints/utilities/edit/get-drafts/">get-drafts.xsl</a>
+								</li>
+								<li>
+									<a href="../../../../blueprints/utilities/edit/get-images/">get-images.xsl</a>
+								</li>
+								<li>
+									<a href="../../../../blueprints/utilities/edit/get-notes/">get-notes.xsl</a>
+								</li>
+								<li>
+									<a href="../../../../blueprints/utilities/edit/master/">master.xsl</a>
+								</li>
+								<li>
+									<a href="../../../../blueprints/utilities/edit/navigation/">navigation.xsl</a>
+								</li>
+								<li>
+									<a href="../../../../blueprints/utilities/edit/page-title/">page-title.xsl</a>
+								</li>
+								<li>
+									<a href="../../../../blueprints/utilities/edit/typography/">typography.xsl</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="actions">
+						<input name="action[save]" type="submit" value="Save Changes" accesskey="s">
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

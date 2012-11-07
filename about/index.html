@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Symphony CMS — About</title>
+    <link rel="icon" type="images/png" href="../workspace/images/icons/bookmark.png" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../workspace/css/styles.css" />
+    <link rel="alternate" type="application/rss+xml" href="../rss/index.xml" />
+  </head>
+  <body>
+    <div id="masthead">
+      <h1>
+        <a href="../">Symphony CMS</a>
+      </h1>
+      <ul id="menu">
+        <li>
+          <a href="../archive/">Archive</a>
+        </li>
+        <li>
+          <a href="" class="active">About</a>
+        </li>
+      </ul>
+    </div>
+    <div id="package">
+      <p class="date">06<span>Nov</span></p>
+      <div id="content">
+        <h3>Biography</h3>
+        <h2>John Smith is a professional space monkey extraordinaire</h2>
+        <p><em>Symphony CMS</em> is running off a freshly installed copy of <a href="http://getsymphony.com">Symphony CMS</a>.</p>
+        <p>Be sure to check back regularly as the site transforms from <em>fresh prince</em> to <em>whizz-bang candy steak</em>.</p>
+        <hr />
+        <h3>Contact Me</h3>
+        <div id="guideline">
+          <h4>Notes</h4>
+          <ul>
+            <li>It's preferred to use the contact form rather than email. There is always a chance for emails to be picked up as spam.</li>
+            <li>I will generally reply to messages within 24 hours unless I am horribly swamped.</li>
+          </ul>
+        </div>
+        <form action="" method="post">
+          <fieldset>
+            <label class="required">Name <input type="text" name="fields[name]" value="" /></label>
+            <label class="required">Email <input type="text" name="fields[email]" value="" /></label>
+            <label class="required">Subject
+				<input type="text" name="fields[subject]" value="General Enquiry" /></label>
+            <label>Message <textarea name="fields[message]" rows="5" cols="21"></textarea></label>
+            <input name="send-email[recipient]" value="John" type="hidden" />
+            <input name="send-email[reply-to-email]" value="fields[email]" type="hidden" />
+            <input name="send-email[reply-to-name]" value="fields[name]" type="hidden" />
+            <input name="send-email[subject]" value="fields[subject]" type="hidden" />
+            <input name="send-email[body]" value="fields[message],fields[subject],fields[email],fields[name]" type="hidden" />
+            <input id="submit" type="submit" name="action[save-message]" value="Send" />
+          </fieldset>
+        </form>
+      </div>
+    </div>
+    <ul id="footer">
+      <li>Orchestrated by <a class="symphony" href="http://getsymphony.com/">Symphony</a></li>
+      <li>Broadcasted via <a class="rss" href="../rss/index.xml">XML Feed</a></li>
+    </ul>
+  </body>
+</html>
+
+<!-- Localized -->

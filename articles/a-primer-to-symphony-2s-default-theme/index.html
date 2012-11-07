@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Symphony CMS — Articles</title>
+    <link rel="icon" type="images/png" href="../../workspace/images/icons/bookmark.png" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../../workspace/css/styles.css" />
+    <link rel="alternate" type="application/rss+xml" href="../../rss/index.xml" />
+  </head>
+  <body>
+    <div id="masthead">
+      <h1>
+        <a href="../../">Symphony CMS</a>
+      </h1>
+      <ul id="menu">
+        <li>
+          <a href="../../archive/">Archive</a>
+        </li>
+        <li>
+          <a href="../../about/">About</a>
+        </li>
+      </ul>
+    </div>
+    <div id="package">
+      <p class="date">06<span>Nov</span></p>
+      <div id="content">
+        <div class="article">
+          <h3>2nd Jan 2011</h3>
+          <h2>
+            <a href="">A primer to Symphony 2's default theme</a>
+          </h2>
+          <ul class="meta">
+            <li class="icon-filed-under">Symphony</li>
+            <li class="icon-comments">
+              <a href="#comments">Comments (0)</a>
+            </li>
+          </ul>
+          <p>Every theme in Symphony has an important mission: to introduce newcomers to Symphony by way of a working example. <em>Spectrum</em>, the name of this version's default theme, was designed and developed with such a mission in mind by following a set of constraints. A default theme is required to:</p>
+          <ol>
+            <li>be presented in a format that is universally identified and intuitive.</li>
+            <li>have a clear and simple HTML structure.</li>
+            <li>demonstrate the fundamental concepts in Symphony—<a href="http://getsymphony.com/learn/concepts/view/sections/">sections</a>, <a href="http://getsymphony.com/learn/concepts/view/fields/">fields</a>, <a href="http://getsymphony.com/learn/concepts/view/data-sources/">data sources</a> and <a href="http://getsymphony.com/learn/concepts/view/events/">events</a>—and their interactions together.</li>
+            <li>avoid functionality that does not have any educational value.</li>
+          </ol>
+          <h4>The design</h4>
+          <p>Our first rule states that a default theme needs to be in a format that is instantly recognisable to a user. As a result, all of the themes created in Symphony's history have emphasised a weblog structure. <em>Spectrum</em> continues this tradition.</p>
+          <p><em>Cubic</em>, the name of a previous default theme, followed the teaching mandate very closely. However, the theme took it one step further and removed complex structure and colour in favour of a simplified look and feel. The main design goal for <em>Spectrum</em> is to introduce more colours but still follow the philosophy of a simplistic layout.</p>
+          <h4>Features</h4>
+          <p><em>Spectrum</em> has a handful of additional features that you won't find in previous default themes. These new features are not only meant to demonstrate the capabilities of the system but also explain some fundamental philosophies in Symphony 2. Below is a list of features:</p>
+          <ul>
+            <li>Logged in users will see links to Symphony's admin to edit articles, manage comments and add notes.</li>
+            <li>Logged in users will see 3 protected menu items, article drafts, the debug page and a link to the Symphony admin.</li>
+            <li>Articles on the drafts page sport a button to publish the article.</li>
+            <li>Article images take advantage of Symphony's built-in image manipulation feature to crop and size the image automatically.</li>
+            <li>The contact form on the about page saves the content to the Messages section on the back end and emails the website's owner.</li>
+          </ul>
+          <h4>Philosophy</h4>
+          <p>All of the above takes advantage of new features found in version 2. An important concept that is being advocated in Symphony is the practise of creating a tighter connection between the front end and the back end. Developers are encouraged to take advantage of the simplified URL structure of the admin to create a more convenient environment for their users.</p>
+          <p>With the introduction of the Event editor, developers now have even more control when developing a website. For example, the <em>Publish</em> button on the <a href="../../../../drafts/">article drafts page</a> utilises the event editor to create an interaction between the front end and the back end. This allows the <em>Publish</em> button to update the "Publish this article" checkbox field from the "Articles" section. This feature also complements and encourages the philosophy of a more seamless environment between the website and the admin interface.</p>
+        </div>
+        <hr />
+        <h3>Comments</h3>
+        <div id="comments">
+          <p>There are no comments made so far.</p>
+        </div>
+        <hr />
+        <h3>Make a comment</h3>
+        <div id="guideline">
+          <h4>Rules</h4>
+          <ul>
+            <li>Please keep the language PG-13, my mum reads this blog. Hi mum!</li>
+            <li>Text is formatted with <a href="http://daringfireball.net/projects/markdown/syntax">Markdown</a>.</li>
+          </ul>
+        </div>
+        <form action="" method="post">
+          <fieldset>
+            <label>Name <input type="text" name="fields[author]" value="" /></label>
+            <label>Email <input type="text" name="fields[email]" value="" /></label>
+            <label>Website <input type="text" name="fields[website]" value="" /></label>
+            <label>Comment <textarea name="fields[comment]" rows="5" cols="21"></textarea></label>
+            <input name="fields[article]" value="3" type="hidden" />
+            <input id="submit" type="submit" name="action[save-comment]" value="Post Comment" />
+          </fieldset>
+        </form>
+      </div>
+    </div>
+    <ul id="footer">
+      <li>Orchestrated by <a class="symphony" href="http://getsymphony.com/">Symphony</a></li>
+      <li>Broadcasted via <a class="rss" href="../../rss/index.xml">XML Feed</a></li>
+    </ul>
+  </body>
+</html>
+
+<!-- Localized -->

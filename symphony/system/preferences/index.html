@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../assets/css/symphony.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../assets/css/symphony.legacy.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../assets/css/symphony.grids.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../assets/css/symphony.frames.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../assets/css/symphony.forms.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../assets/css/symphony.tables.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../assets/css/symphony.drawers.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../assets/css/symphony.tabs.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../assets/css/symphony.notices.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../assets/css/admin.css">
+		<script type="text/javascript" src="../../assets/js/jquery.js"></script>
+		<script type="text/javascript" src="../../assets/js/symphony.js"></script>
+		<script type="text/javascript" src="../../assets/js/symphony.collapsible.js"></script>
+		<script type="text/javascript" src="../../assets/js/symphony.orderable.js"></script>
+		<script type="text/javascript" src="../../assets/js/symphony.selectable.js"></script>
+		<script type="text/javascript" src="../../assets/js/symphony.duplicator.js"></script>
+		<script type="text/javascript" src="../../assets/js/symphony.tags.js"></script>
+		<script type="text/javascript" src="../../assets/js/symphony.pickable.js"></script>
+		<script type="text/javascript" src="../../assets/js/symphony.timeago.js"></script>
+		<script type="text/javascript" src="../../assets/js/symphony.notify.js"></script>
+		<script type="text/javascript" src="../../assets/js/symphony.drawer.js"></script>
+		<script type="text/javascript" src="../../assets/js/admin.js"></script>
+		<script type="text/javascript">Symphony.Context.add('env', {"page-namespace":"\/system\/preferences"}); Symphony.Context.add('root', 'http://home/sym/symphony-2');</script>
+		<title>Preferences &ndash; Symphony</title>
+		<script type="text/javascript" src="http://home/sym/symphony-2/extensions/jit_image_manipulation/assets/jit_image_manipulation.preferences.js"></script>
+	</head>
+	<body id="system-preferences" class="single">
+		<div id="wrapper">
+			<header id="header">
+				<p class="notice">Your Symphony installation is up to date, but the installer was still detected. For security reasons, it should be removed. <a href="#remove">Remove installer?</a></p>
+				<h1>
+					<a href="../../../">Symphony CMS</a>
+				</h1>
+				<ul id="session">
+					<li>
+						<a href="../../system/authors/edit/1/" data-id="1" data-name="John" data-type="developer">John Smith</a>
+					</li>
+					<li>
+						<a href="../../../" accesskey="l">Log out</a>
+					</li>
+				</ul>
+				<nav id="nav">
+					<ul class="content">
+						<li>Content
+							<ul>
+								<li>
+									<a href="../../publish/articles/">Articles</a>
+								</li>
+								<li>
+									<a href="../../publish/categories/">Categories</a>
+								</li>
+								<li>
+									<a href="../../publish/notes/">Notes</a>
+								</li>
+								<li>
+									<a href="../../publish/comments/">Comments</a>
+								</li>
+								<li>
+									<a href="../../publish/messages/">Messages</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="structure">
+						<li>Blueprints
+							<ul>
+								<li>
+									<a href="../../blueprints/pages/">Pages</a>
+								</li>
+								<li>
+									<a href="../../blueprints/sections/">Sections</a>
+								</li>
+								<li>
+									<a href="../../blueprints/datasources/">Data Sources</a>
+								</li>
+								<li>
+									<a href="../../blueprints/events/">Events</a>
+								</li>
+								<li>
+									<a href="../../blueprints/utilities/">Utilities</a>
+								</li>
+							</ul>
+						</li>
+						<li class="active">System
+							<ul>
+								<li>
+									<a href="../../system/authors/">Authors</a>
+								</li>
+								<li>
+									<a href="../../system/preferences/">Preferences</a>
+								</li>
+								<li>
+									<a href="../../system/extensions/">Extensions</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</header>
+			<div id="context">
+				<div id="breadcrumbs">
+					<h2>Preferences</h2>
+				</div>
+			</div>
+			<div id="contents">
+				<form action="../../system/preferences/" method="post">
+					<fieldset class="settings condensed">
+						<legend>Default Email Settings</legend>
+						<label>Gateway
+							<select name="settings[Email][default_gateway]" class="picker">
+								<option value="sendmail" selected="selected">Sendmail (default)</option>
+								<option value="smtp">SMTP</option>
+							</select>
+						</label>
+					</fieldset>
+					<fieldset class="settings condensed pickable" id="sendmail">
+						<legend>Email: Sendmail</legend>
+						<div class="two columns">
+							<label class="column">From Name
+								<input name="settings[email_sendmail][from_name]" type="text">
+							</label>
+							<label class="column">From Email Address
+								<input name="settings[email_sendmail][from_address]" type="text">
+							</label>
+						</div>
+					</fieldset>
+					<fieldset class="settings condensed pickable" id="smtp">
+						<legend>Email: SMTP</legend>
+						<div class="two columns">
+							<label class="column">From Name
+								<input name="settings[email_smtp][from_name]" type="text">
+							</label>
+							<label class="column">From Email Address
+								<input name="settings[email_smtp][from_address]" type="text">
+							</label>
+						</div>
+						<div class="two columns">
+							<label class="column">Host
+								<input name="settings[email_smtp][host]" type="text" value="127.0.0.1">
+							</label>
+							<label class="column">Port
+								<input name="settings[email_smtp][port]" type="text" value="25">
+							</label>
+						</div>
+						<label class="column">
+							<select name="settings[email_smtp][secure]">
+								<option value="no" selected="selected">No encryption</option>
+								<option value="ssl">SSL encryption</option>
+								<option value="tls">TLS encryption</option>
+							</select>
+						</label>
+						<p class="help">For a secure connection, SSL and TLS are supported. Please check the manual of your email provider for more details.</p>
+						<input name="settings[email_smtp][auth]" type="hidden" value="0">
+						<label class="column"><input name="settings[email_smtp][auth]" type="checkbox" value="1" /> Requires authentication</label>
+						<p class="help">Some SMTP connections require authentication. If that is the case, enter the username/password combination below.</p>
+						<div class="two columns">
+							<label class="column">Username
+								<input name="settings[email_smtp][username]" type="text">
+							</label>
+							<label class="column">Password
+								<input name="settings[email_smtp][password]" type="password">
+							</label>
+						</div>
+					</fieldset>
+					<fieldset class="settings">
+						<legend>Export Ensemble</legend>
+						<div id="file-actions" class="label">
+							<span class="frame">
+								<button name="action[save-install-files]" type="submit">Save Install Files</button>
+								<button name="action[download-zip]" type="submit">Download ZIP</button>
+							</span>
+							<p class="help">Save (overwrite) install files or package entire site as a <code>.zip</code> archive for download.</p>
+						</div>
+					</fieldset>
+					<fieldset class="settings">
+						<legend>JIT Image Manipulation</legend>
+						<p class="help">Recipes are named rules for the JIT settings.</p>
+						<p class="label">Recipes</p>
+						<div class="frame">
+							<ol class="jit-duplicator" data-add="Add recipe" data-remove="Remove recipe">
+								<li class="template" data-type="mode-0">
+									<header data-name="Direct display">
+										<h4><strong>New Recipe</strong> <span class="type">Direct display</span></h4>
+									</header>
+									<input name="jit_image_manipulation[recipes][-1][mode]" type="hidden" value="0">
+									<div class="two columns">
+										<label class="column">Name
+											<input name="jit_image_manipulation[recipes][-1][name]" type="text">
+										</label>
+										<label class="column">Handle<i>e.g. /image/{handle}/path/to/my-image.jpg</i>
+											<input name="jit_image_manipulation[recipes][-1][url-parameter]" type="text">
+										</label>
+									</div>
+									<div class="two columns">
+										<input name="jit_image_manipulation[recipes][-1][external]" type="hidden" value="0">
+										<label class="column justified"><input name="jit_image_manipulation[recipes][-1][external]" type="checkbox" value="1" /> External Image</label>
+									</div>
+								</li>
+								<li class="template" data-type="mode-1">
+									<header data-name="Resize">
+										<h4><strong>New Recipe</strong> <span class="type">Resize</span></h4>
+									</header>
+									<input name="jit_image_manipulation[recipes][-1][mode]" type="hidden" value="1">
+									<div class="two columns">
+										<label class="column">Name
+											<input name="jit_image_manipulation[recipes][-1][name]" type="text">
+										</label>
+										<label class="column">Handle<i>e.g. /image/{handle}/path/to/my-image.jpg</i>
+											<input name="jit_image_manipulation[recipes][-1][url-parameter]" type="text">
+										</label>
+									</div>
+									<div class="two columns">
+										<label class="column">Width
+											<input name="jit_image_manipulation[recipes][-1][width]" type="text">
+										</label>
+										<label class="column">Height
+											<input name="jit_image_manipulation[recipes][-1][height]" type="text">
+										</label>
+									</div>
+									<div class="two columns">
+										<label class="column">Image quality
+											<i>Optional</i>
+											<input name="jit_image_manipulation[recipes][-1][quality]" type="text">
+										</label>
+										<input name="jit_image_manipulation[recipes][-1][external]" type="hidden" value="0">
+										<label class="column justified"><input name="jit_image_manipulation[recipes][-1][external]" type="checkbox" value="1" /> External Image</label>
+									</div>
+								</li>
+								<li class="template" data-type="mode-2">
+									<header data-name="Crop to Fill">
+										<h4><strong>New Recipe</strong> <span class="type">Crop to Fill</span></h4>
+									</header>
+									<input name="jit_image_manipulation[recipes][-1][mode]" type="hidden" value="2">
+									<div class="two columns">
+										<label class="column">Name
+											<input name="jit_image_manipulation[recipes][-1][name]" type="text">
+										</label>
+										<label class="column">Handle<i>e.g. /image/{handle}/path/to/my-image.jpg</i>
+											<input name="jit_image_manipulation[recipes][-1][url-parameter]" type="text">
+										</label>
+									</div>
+									<div class="two columns">
+										<label class="column">Width
+											<input name="jit_image_manipulation[recipes][-1][width]" type="text">
+										</label>
+										<label class="column">Height
+											<input name="jit_image_manipulation[recipes][-1][height]" type="text">
+										</label>
+									</div>
+									<div class="two columns">
+										<label class="column">Position
+											<select name="jit_image_manipulation[recipes][-1][position]">
+												<option value="1">Top left</option>
+												<option value="2">Top center</option>
+												<option value="3">Top right</option>
+												<option value="4">Center left</option>
+												<option value="5">Center</option>
+												<option value="6">Center right</option>
+												<option value="7">Bottom left</option>
+												<option value="8">Bottom center</option>
+												<option value="9">Bottom right</option>
+											</select>
+										</label>
+										<label class="column">Background Color
+											<i>Optional</i>
+											<input name="jit_image_manipulation[recipes][-1][background]" type="text">
+										</label>
+									</div>
+									<div class="two columns">
+										<label class="column">Image quality
+											<i>Optional</i>
+											<input name="jit_image_manipulation[recipes][-1][quality]" type="text">
+										</label>
+										<input name="jit_image_manipulation[recipes][-1][external]" type="hidden" value="0">
+										<label class="column justified"><input name="jit_image_manipulation[recipes][-1][external]" type="checkbox" value="1" /> External Image</label>
+									</div>
+								</li>
+								<li class="template" data-type="mode-3">
+									<header data-name="Resize Canvas">
+										<h4><strong>New Recipe</strong> <span class="type">Resize Canvas</span></h4>
+									</header>
+									<input name="jit_image_manipulation[recipes][-1][mode]" type="hidden" value="3">
+									<div class="two columns">
+										<label class="column">Name
+											<input name="jit_image_manipulation[recipes][-1][name]" type="text">
+										</label>
+										<label class="column">Handle<i>e.g. /image/{handle}/path/to/my-image.jpg</i>
+											<input name="jit_image_manipulation[recipes][-1][url-parameter]" type="text">
+										</label>
+									</div>
+									<div class="two columns">
+										<label class="column">Width
+											<input name="jit_image_manipulation[recipes][-1][width]" type="text">
+										</label>
+										<label class="column">Height
+											<input name="jit_image_manipulation[recipes][-1][height]" type="text">
+										</label>
+									</div>
+									<div class="two columns">
+										<label class="column">Position
+											<select name="jit_image_manipulation[recipes][-1][position]">
+												<option value="1">Top left</option>
+												<option value="2">Top center</option>
+												<option value="3">Top right</option>
+												<option value="4">Center left</option>
+												<option value="5">Center</option>
+												<option value="6">Center right</option>
+												<option value="7">Bottom left</option>
+												<option value="8">Bottom center</option>
+												<option value="9">Bottom right</option>
+											</select>
+										</label>
+										<label class="column">Background Color
+											<i>Optional</i>
+											<input name="jit_image_manipulation[recipes][-1][background]" type="text">
+										</label>
+									</div>
+									<div class="two columns">
+										<label class="column">Image quality
+											<i>Optional</i>
+											<input name="jit_image_manipulation[recipes][-1][quality]" type="text">
+										</label>
+										<input name="jit_image_manipulation[recipes][-1][external]" type="hidden" value="0">
+										<label class="column justified"><input name="jit_image_manipulation[recipes][-1][external]" type="checkbox" value="1" /> External Image</label>
+									</div>
+								</li>
+								<li class="template" data-type="mode-4">
+									<header data-name="Resize to Fit">
+										<h4><strong>New Recipe</strong> <span class="type">Resize to Fit</span></h4>
+									</header>
+									<input name="jit_image_manipulation[recipes][-1][mode]" type="hidden" value="4">
+									<div class="two columns">
+										<label class="column">Name
+											<input name="jit_image_manipulation[recipes][-1][name]" type="text">
+										</label>
+										<label class="column">Handle<i>e.g. /image/{handle}/path/to/my-image.jpg</i>
+											<input name="jit_image_manipulation[recipes][-1][url-parameter]" type="text">
+										</label>
+									</div>
+									<div class="two columns">
+										<label class="column">Width
+											<input name="jit_image_manipulation[recipes][-1][width]" type="text">
+										</label>
+										<label class="column">Height
+											<input name="jit_image_manipulation[recipes][-1][height]" type="text">
+										</label>
+									</div>
+									<div class="two columns">
+										<label class="column">Image quality
+											<i>Optional</i>
+											<input name="jit_image_manipulation[recipes][-1][quality]" type="text">
+										</label>
+										<input name="jit_image_manipulation[recipes][-1][external]" type="hidden" value="0">
+										<label class="column justified"><input name="jit_image_manipulation[recipes][-1][external]" type="checkbox" value="1" /> External Image</label>
+									</div>
+								</li>
+								<li class="template" data-type="mode-regex">
+									<header data-name="Custom">
+										<h4><strong>New Recipe</strong> <span class="type">Custom</span></h4>
+									</header>
+									<input name="jit_image_manipulation[recipes][-1][mode]" type="hidden" value="regex">
+									<div class="two columns">
+										<label class="column">Name
+											<input name="jit_image_manipulation[recipes][-1][name]" type="text">
+										</label>
+										<label class="column">Regular Expression
+											<input name="jit_image_manipulation[recipes][-1][url-parameter]" type="text">
+										</label>
+									</div>
+									<label>JIT Parameter
+										<input name="jit_image_manipulation[recipes][-1][jit-parameter]" type="text">
+									</label>
+									<div class="two columns">
+										<label class="column">Image quality
+											<i>Optional</i>
+											<input name="jit_image_manipulation[recipes][-1][quality]" type="text">
+										</label>
+									</div>
+								</li>
+							</ol>
+						</div>
+						<label><input name="settings[image][disable_regular_rules]" type="checkbox" value="yes" /> Disable dynamic URLs and use named recipes only</label>
+						<label>Trusted Sites
+							<textarea name="jit_image_manipulation[trusted_external_sites]" rows="5" cols="50"></textarea>
+						</label>
+						<p class="help">Leave empty to disable external linking. Single rule per line. Add * at end for wild card matching.</p>
+					</fieldset>
+					<fieldset class="settings">
+						<legend>Maintenance Mode</legend>
+						<label><input name="settings[maintenance_mode][enabled]" type="checkbox" value="yes" /> Enable maintenance mode</label>
+						<p class="help">Maintenance mode will redirect all visitors, other than developers, to the specified maintenance page. To specify a maintenance page, give a page a type of <code>maintenance</code></p>
+					</fieldset>
+					<div class="actions">
+						<input name="action[save]" type="submit" value="Save Changes" accesskey="s">
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

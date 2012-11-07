@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../assets/css/symphony.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../assets/css/symphony.legacy.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../assets/css/symphony.grids.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../assets/css/symphony.frames.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../assets/css/symphony.forms.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../assets/css/symphony.tables.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../assets/css/symphony.drawers.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../assets/css/symphony.tabs.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../assets/css/symphony.notices.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../assets/css/admin.css">
+		<script type="text/javascript" src="../../assets/js/jquery.js"></script>
+		<script type="text/javascript" src="../../assets/js/symphony.js"></script>
+		<script type="text/javascript" src="../../assets/js/symphony.collapsible.js"></script>
+		<script type="text/javascript" src="../../assets/js/symphony.orderable.js"></script>
+		<script type="text/javascript" src="../../assets/js/symphony.selectable.js"></script>
+		<script type="text/javascript" src="../../assets/js/symphony.duplicator.js"></script>
+		<script type="text/javascript" src="../../assets/js/symphony.tags.js"></script>
+		<script type="text/javascript" src="../../assets/js/symphony.pickable.js"></script>
+		<script type="text/javascript" src="../../assets/js/symphony.timeago.js"></script>
+		<script type="text/javascript" src="../../assets/js/symphony.notify.js"></script>
+		<script type="text/javascript" src="../../assets/js/symphony.drawer.js"></script>
+		<script type="text/javascript" src="../../assets/js/admin.js"></script>
+		<script type="text/javascript">Symphony.Context.add('env', {"page-namespace":"\/blueprints\/utilities"}); Symphony.Context.add('root', 'http://home/sym/symphony-2');</script>
+		<title>Utilities &ndash; Symphony</title>
+	</head>
+	<body id="blueprints-utilities" class="index">
+		<div id="wrapper">
+			<header id="header">
+				<p class="notice">Your Symphony installation is up to date, but the installer was still detected. For security reasons, it should be removed. <a href="#remove">Remove installer?</a></p>
+				<h1>
+					<a href="../../../">Symphony CMS</a>
+				</h1>
+				<ul id="session">
+					<li>
+						<a href="../../system/authors/edit/1/" data-id="1" data-name="John" data-type="developer">John Smith</a>
+					</li>
+					<li>
+						<a href="../../../" accesskey="l">Log out</a>
+					</li>
+				</ul>
+				<nav id="nav">
+					<ul class="content">
+						<li>Content
+							<ul>
+								<li>
+									<a href="../../publish/articles/">Articles</a>
+								</li>
+								<li>
+									<a href="../../publish/categories/">Categories</a>
+								</li>
+								<li>
+									<a href="../../publish/notes/">Notes</a>
+								</li>
+								<li>
+									<a href="../../publish/comments/">Comments</a>
+								</li>
+								<li>
+									<a href="../../publish/messages/">Messages</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="structure">
+						<li class="active">Blueprints
+							<ul>
+								<li>
+									<a href="../../blueprints/pages/">Pages</a>
+								</li>
+								<li>
+									<a href="../../blueprints/sections/">Sections</a>
+								</li>
+								<li>
+									<a href="../../blueprints/datasources/">Data Sources</a>
+								</li>
+								<li>
+									<a href="../../blueprints/events/">Events</a>
+								</li>
+								<li>
+									<a href="../../blueprints/utilities/">Utilities</a>
+								</li>
+							</ul>
+						</li>
+						<li>System
+							<ul>
+								<li>
+									<a href="../../system/authors/">Authors</a>
+								</li>
+								<li>
+									<a href="../../system/preferences/">Preferences</a>
+								</li>
+								<li>
+									<a href="../../system/extensions/">Extensions</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</header>
+			<div id="context">
+				<div id="breadcrumbs">
+					<h2>Utilities</h2>
+				</div>
+				<ul class="actions">
+					<li><a href="../../blueprints/utilities/new/" title="Create a new utility" class="create button">Create New</a></li>
+				</ul>
+			</div>
+			<div id="contents">
+				<form action="../../blueprints/utilities/" method="post">
+					<table class="selectable">
+						<thead>
+							<tr>
+								<th scope="col">Name</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<a href="../../blueprints/utilities/edit/date-time/">date-time.xsl</a>
+									<input name="items[date-time.xsl]" type="checkbox">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../blueprints/utilities/edit/get-archive/">get-archive.xsl</a>
+									<input name="items[get-archive.xsl]" type="checkbox">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../blueprints/utilities/edit/get-article/">get-article.xsl</a>
+									<input name="items[get-article.xsl]" type="checkbox">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../blueprints/utilities/edit/get-comments/">get-comments.xsl</a>
+									<input name="items[get-comments.xsl]" type="checkbox">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../blueprints/utilities/edit/get-drafts/">get-drafts.xsl</a>
+									<input name="items[get-drafts.xsl]" type="checkbox">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../blueprints/utilities/edit/get-images/">get-images.xsl</a>
+									<input name="items[get-images.xsl]" type="checkbox">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../blueprints/utilities/edit/get-notes/">get-notes.xsl</a>
+									<input name="items[get-notes.xsl]" type="checkbox">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../blueprints/utilities/edit/master/">master.xsl</a>
+									<input name="items[master.xsl]" type="checkbox">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../blueprints/utilities/edit/navigation/">navigation.xsl</a>
+									<input name="items[navigation.xsl]" type="checkbox">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../blueprints/utilities/edit/page-title/">page-title.xsl</a>
+									<input name="items[page-title.xsl]" type="checkbox">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../blueprints/utilities/edit/typography/">typography.xsl</a>
+									<input name="items[typography.xsl]" type="checkbox">
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="actions">
+						<fieldset class="apply">
+							<div>
+								<select name="with-selected">
+									<option value="">With Selected...</option>
+									<option value="delete" class="confirm">Delete</option>
+								</select>
+							</div>
+							<button name="action[apply]" type="submit">Apply</button>
+						</fieldset>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

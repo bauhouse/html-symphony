@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../../../assets/css/symphony.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../../../assets/css/symphony.legacy.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../../../assets/css/symphony.grids.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../../../assets/css/symphony.frames.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../../../assets/css/symphony.forms.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../../../assets/css/symphony.tables.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../../../assets/css/symphony.drawers.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../../../assets/css/symphony.tabs.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../../../assets/css/symphony.notices.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../../../assets/css/admin.css">
+		<script type="text/javascript" src="../../../../assets/js/jquery.js"></script>
+		<script type="text/javascript" src="../../../../assets/js/symphony.js"></script>
+		<script type="text/javascript" src="../../../../assets/js/symphony.collapsible.js"></script>
+		<script type="text/javascript" src="../../../../assets/js/symphony.orderable.js"></script>
+		<script type="text/javascript" src="../../../../assets/js/symphony.selectable.js"></script>
+		<script type="text/javascript" src="../../../../assets/js/symphony.duplicator.js"></script>
+		<script type="text/javascript" src="../../../../assets/js/symphony.tags.js"></script>
+		<script type="text/javascript" src="../../../../assets/js/symphony.pickable.js"></script>
+		<script type="text/javascript" src="../../../../assets/js/symphony.timeago.js"></script>
+		<script type="text/javascript" src="../../../../assets/js/symphony.notify.js"></script>
+		<script type="text/javascript" src="../../../../assets/js/symphony.drawer.js"></script>
+		<script type="text/javascript" src="../../../../assets/js/admin.js"></script>
+		<script type="text/javascript">Symphony.Context.add('env', {"page-namespace":"\/blueprints\/pages","0":"edit","1":"67"}); Symphony.Context.add('root', 'http://home/sym/symphony-2');</script>
+		<title>RSS &ndash; Pages &ndash; Symphony</title>
+	</head>
+	<body id="blueprints-pages" class="edit id-67 single">
+		<div id="wrapper">
+			<header id="header">
+				<p class="notice">Your Symphony installation is up to date, but the installer was still detected. For security reasons, it should be removed. <a href="#remove">Remove installer?</a></p>
+				<h1>
+					<a href="../../../../../">Symphony CMS</a>
+				</h1>
+				<ul id="session">
+					<li>
+						<a href="../../../../system/authors/edit/1/" data-id="1" data-name="John" data-type="developer">John Smith</a>
+					</li>
+					<li>
+						<a href="../../../../../" accesskey="l">Log out</a>
+					</li>
+				</ul>
+				<nav id="nav">
+					<ul class="content">
+						<li>Content
+							<ul>
+								<li>
+									<a href="../../../../publish/articles/">Articles</a>
+								</li>
+								<li>
+									<a href="../../../../publish/categories/">Categories</a>
+								</li>
+								<li>
+									<a href="../../../../publish/notes/">Notes</a>
+								</li>
+								<li>
+									<a href="../../../../publish/comments/">Comments</a>
+								</li>
+								<li>
+									<a href="../../../../publish/messages/">Messages</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="structure">
+						<li class="active">Blueprints
+							<ul>
+								<li>
+									<a href="../../../../blueprints/pages/">Pages</a>
+								</li>
+								<li>
+									<a href="../../../../blueprints/sections/">Sections</a>
+								</li>
+								<li>
+									<a href="../../../../blueprints/datasources/">Data Sources</a>
+								</li>
+								<li>
+									<a href="../../../../blueprints/events/">Events</a>
+								</li>
+								<li>
+									<a href="../../../../blueprints/utilities/">Utilities</a>
+								</li>
+							</ul>
+						</li>
+						<li>System
+							<ul>
+								<li>
+									<a href="../../../../system/authors/">Authors</a>
+								</li>
+								<li>
+									<a href="../../../../system/preferences/">Preferences</a>
+								</li>
+								<li>
+									<a href="../../../../system/extensions/">Extensions</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</header>
+			<div id="context">
+				<div id="breadcrumbs">
+					<nav>
+						<p>
+							<a href="../../../../blueprints/pages/">Pages</a>
+							<span class="sep">&#8250;</span>
+						</p>
+					</nav>
+					<h2>RSS</h2>
+				</div>
+				<ul class="actions">
+					<li><a href="../../../../blueprints/pages/template/rss" title="Edit Page Template" class="button" accesskey="t">Edit Page Template</a></li>
+					<li><a href="http://home/sym/symphony-2/rss/" title="View Page on Frontend" class="button" target="_blank" accesskey="v">View Page</a></li>
+				</ul>
+			</div>
+			<div id="contents">
+				<form action="../../../../blueprints/pages/edit/67/" method="post">
+					<fieldset class="settings">
+						<legend>Page Settings</legend>
+						<label>Title
+							<input name="fields[title]" type="text" value="RSS">
+						</label>
+						<div class="two columns">
+							<div class="column">
+								<label>URL Handle
+									<input name="fields[handle]" type="text" value="rss">
+								</label>
+								<label>Parent Page
+									<select name="fields[parent]">
+										<option value="">/</option>
+										<option value="66">/about</option>
+										<option value="68">/archive</option>
+										<option value="69">/articles</option>
+										<option value="70">/drafts</option>
+										<option value="64">/home</option>
+										<option value="75">/maintenance</option>
+										<option value="76">/page-not-found</option>
+									</select>
+								</label>
+							</div>
+							<div class="column">
+								<label>URL Parameters
+									<input name="fields[params]" type="text" placeholder="param1/param2">
+								</label>
+								<label>Page Type
+									<input name="fields[type]" type="text" value="hidden, XML">
+								</label>
+								<ul class="tags">
+									<li>index</li>
+									<li>XML</li>
+									<li>JSON</li>
+									<li>admin</li>
+									<li>404</li>
+									<li>403</li>
+									<li>hidden</li>
+									<li>maintenance</li>
+								</ul>
+							</div>
+						</div>
+					</fieldset>
+					<fieldset class="settings">
+						<legend>Page Resources</legend>
+						<div class="two columns">
+							<label class="column">Events
+								<select name="fields[events][]" multiple="multiple">
+									<option value="login">Login Info</option>
+									<option value="publish_article">Publish Article</option>
+									<option value="save_comment">Save Comment</option>
+									<option value="save_message">Save Message</option>
+								</select>
+							</label>
+							<label class="column">Data Sources
+								<select name="fields[data_sources][]" multiple="multiple">
+									<option value="archive">Archive</option>
+									<option value="article">Article</option>
+									<option value="article_images">Article Images</option>
+									<option value="comments">Comments</option>
+									<option value="drafts">Drafts</option>
+									<option value="homepage_articles">Homepage Articles</option>
+									<option value="jit_image_manipulation_recipes">JIT Image Manipulation Recipes</option>
+									<option value="navigation">Navigation</option>
+									<option value="notes">Notes</option>
+									<option value="rss_articles" selected="selected">RSS Articles</option>
+									<option value="website_owner">Website Owner</option>
+								</select>
+							</label>
+						</div>
+					</fieldset>
+					<div class="actions">
+						<input name="action[save]" type="submit" value="Save Changes" accesskey="s">
+						<button name="action[delete]" class="button confirm delete" title="Delete this page" accesskey="d" data-message="Are you sure you want to delete this page?">Delete</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

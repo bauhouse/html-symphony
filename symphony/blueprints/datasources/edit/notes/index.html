@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../../../assets/css/symphony.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../../../assets/css/symphony.legacy.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../../../assets/css/symphony.grids.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../../../assets/css/symphony.frames.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../../../assets/css/symphony.forms.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../../../assets/css/symphony.tables.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../../../assets/css/symphony.drawers.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../../../assets/css/symphony.tabs.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../../../assets/css/symphony.notices.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../../../assets/css/admin.css">
+		<script type="text/javascript" src="../../../../assets/js/jquery.js"></script>
+		<script type="text/javascript" src="../../../../assets/js/symphony.js"></script>
+		<script type="text/javascript" src="../../../../assets/js/symphony.collapsible.js"></script>
+		<script type="text/javascript" src="../../../../assets/js/symphony.orderable.js"></script>
+		<script type="text/javascript" src="../../../../assets/js/symphony.selectable.js"></script>
+		<script type="text/javascript" src="../../../../assets/js/symphony.duplicator.js"></script>
+		<script type="text/javascript" src="../../../../assets/js/symphony.tags.js"></script>
+		<script type="text/javascript" src="../../../../assets/js/symphony.pickable.js"></script>
+		<script type="text/javascript" src="../../../../assets/js/symphony.timeago.js"></script>
+		<script type="text/javascript" src="../../../../assets/js/symphony.notify.js"></script>
+		<script type="text/javascript" src="../../../../assets/js/symphony.drawer.js"></script>
+		<script type="text/javascript" src="../../../../assets/js/admin.js"></script>
+		<script type="text/javascript">Symphony.Context.add('env', {"page-namespace":"\/blueprints\/datasources","0":"edit","1":"notes"}); Symphony.Context.add('root', 'http://home/sym/symphony-2');</script>
+		<title>Notes &ndash; Data Sources &ndash; Symphony</title>
+	</head>
+	<body id="blueprints-datasources" class="edit notes single">
+		<div id="wrapper">
+			<header id="header">
+				<p class="notice">Your Symphony installation is up to date, but the installer was still detected. For security reasons, it should be removed. <a href="#remove">Remove installer?</a></p>
+				<h1>
+					<a href="../../../../../">Symphony CMS</a>
+				</h1>
+				<ul id="session">
+					<li>
+						<a href="../../../../system/authors/edit/1/" data-id="1" data-name="John" data-type="developer">John Smith</a>
+					</li>
+					<li>
+						<a href="../../../../../" accesskey="l">Log out</a>
+					</li>
+				</ul>
+				<nav id="nav">
+					<ul class="content">
+						<li>Content
+							<ul>
+								<li>
+									<a href="../../../../publish/articles/">Articles</a>
+								</li>
+								<li>
+									<a href="../../../../publish/categories/">Categories</a>
+								</li>
+								<li>
+									<a href="../../../../publish/notes/">Notes</a>
+								</li>
+								<li>
+									<a href="../../../../publish/comments/">Comments</a>
+								</li>
+								<li>
+									<a href="../../../../publish/messages/">Messages</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="structure">
+						<li class="active">Blueprints
+							<ul>
+								<li>
+									<a href="../../../../blueprints/pages/">Pages</a>
+								</li>
+								<li>
+									<a href="../../../../blueprints/sections/">Sections</a>
+								</li>
+								<li>
+									<a href="../../../../blueprints/datasources/">Data Sources</a>
+								</li>
+								<li>
+									<a href="../../../../blueprints/events/">Events</a>
+								</li>
+								<li>
+									<a href="../../../../blueprints/utilities/">Utilities</a>
+								</li>
+							</ul>
+						</li>
+						<li>System
+							<ul>
+								<li>
+									<a href="../../../../system/authors/">Authors</a>
+								</li>
+								<li>
+									<a href="../../../../system/preferences/">Preferences</a>
+								</li>
+								<li>
+									<a href="../../../../system/extensions/">Extensions</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</header>
+			<div id="context">
+				<div id="breadcrumbs">
+					<nav>
+						<p>
+							<a href="../../../../blueprints/datasources/">Data Sources</a>
+							<span class="sep">&#8250;</span>
+						</p>
+					</nav>
+					<h2>Notes</h2>
+				</div>
+			</div>
+			<div id="contents">
+				<form action="../../../../blueprints/datasources/edit/notes/" method="post">
+					<fieldset class="settings">
+						<legend>Essentials</legend>
+						<div class="two columns">
+							<div class="column">
+								<label>Name
+									<input name="fields[name]" type="text" value="Notes">
+								</label>
+							</div>
+							<div class="column">
+								<label>Source
+									<select name="fields[source]" id="ds-context">
+										<optgroup label="Sections">
+											<option value="1">Articles</option>
+											<option value="2">Categories</option>
+											<option value="4">Comments</option>
+											<option value="5">Images</option>
+											<option value="6">Messages</option>
+											<option value="3" selected="selected">Notes</option>
+										</optgroup>
+										<optgroup label="System">
+											<option value="authors">Authors</option>
+											<option value="navigation">Navigation</option>
+										</optgroup>
+										<optgroup label="Custom XML">
+											<option value="dynamic_xml">Dynamic XML</option>
+											<option value="static_xml">Static XML</option>
+										</optgroup>
+									</select>
+								</label>
+							</div>
+						</div>
+					</fieldset>
+					<fieldset class="settings contextual authors navigation Sections System">
+						<legend>Filter Results</legend>
+						<p class="help">Use <code>{$param}</code> syntax to filter by page parameters.</p>
+						<div class="contextual 1">
+							<ol class="filters-duplicator" data-add="Add filter" data-remove="Remove filter">
+								<li class="unique template" data-type="id">
+									<header><h4>System ID</h4></header>
+									<label>Value
+										<input name="fields[filter][1][id]" type="text">
+									</label>
+								</li>
+								<li class="unique template" data-type="system:creation-date">
+									<header><h4>System Creation Date</h4></header>
+									<label>Value
+										<input name="fields[filter][1][system:creation-date]" type="text">
+									</label>
+								</li>
+								<li class="unique template" data-type="system:modification-date">
+									<header><h4>System Modified Date</h4></header>
+									<label>Value
+										<input name="fields[filter][1][system:modification-date]" type="text">
+									</label>
+								</li>
+								<li class="unique template" data-type="title">
+									<header data-name="Title (Text Input)"><h4>Title</h4> <span>Text Input</span></header>
+									<label>Value
+										<input name="fields[filter][1][1]" type="text">
+									</label>
+								</li>
+								<li class="unique template" data-type="body">
+									<header data-name="Body (Textarea)"><h4>Body</h4> <span>Textarea</span></header>
+									<label>Value
+										<input name="fields[filter][1][2]" type="text">
+									</label>
+								</li>
+								<li class="unique template" data-type="date">
+									<header data-name="Date (Date)"><h4>Date</h4> <span>Date</span></header>
+									<label>Value
+										<input name="fields[filter][1][3]" type="text">
+									</label>
+								</li>
+								<li class="unique template" data-type="categories">
+									<header data-name="Categories (Select Box Link)"><h4>Categories</h4> <span>Select Box Link</span></header>
+									<label>Value
+										<input name="fields[filter][1][4]" type="text">
+									</label>
+								</li>
+								<li class="unique template" data-type="publish">
+									<header data-name="Publish this article (Checkbox)"><h4>Publish this article</h4> <span>Checkbox</span></header>
+									<label>Value
+										<input name="fields[filter][1][5]" type="text">
+									</label>
+									<ul class="tags">
+										<li>yes</li>
+										<li>no</li>
+									</ul>
+								</li>
+							</ol>
+						</div>
+						<div class="contextual 2">
+							<ol class="filters-duplicator" data-add="Add filter" data-remove="Remove filter">
+								<li class="unique template" data-type="id">
+									<header><h4>System ID</h4></header>
+									<label>Value
+										<input name="fields[filter][2][id]" type="text">
+									</label>
+								</li>
+								<li class="unique template" data-type="system:creation-date">
+									<header><h4>System Creation Date</h4></header>
+									<label>Value
+										<input name="fields[filter][2][system:creation-date]" type="text">
+									</label>
+								</li>
+								<li class="unique template" data-type="system:modification-date">
+									<header><h4>System Modified Date</h4></header>
+									<label>Value
+										<input name="fields[filter][2][system:modification-date]" type="text">
+									</label>
+								</li>
+								<li class="unique template" data-type="title">
+									<header data-name="Title (Text Input)"><h4>Title</h4> <span>Text Input</span></header>
+									<label>Value
+										<input name="fields[filter][2][6]" type="text">
+									</label>
+								</li>
+								<li class="unique template" data-type="description">
+									<header data-name="Description (Textarea)"><h4>Description</h4> <span>Textarea</span></header>
+									<label>Value
+										<input name="fields[filter][2][7]" type="text">
+									</label>
+								</li>
+							</ol>
+						</div>
+						<div class="contextual 4">
+							<ol class="filters-duplicator" data-add="Add filter" data-remove="Remove filter">
+								<li class="unique template" data-type="id">
+									<header><h4>System ID</h4></header>
+									<label>Value
+										<input name="fields[filter][4][id]" type="text">
+									</label>
+								</li>
+								<li class="unique template" data-type="system:creation-date">
+									<header><h4>System Creation Date</h4></header>
+									<label>Value
+										<input name="fields[filter][4][system:creation-date]" type="text">
+									</label>
+								</li>
+								<li class="unique template" data-type="system:modification-date">
+									<header><h4>System Modified Date</h4></header>
+									<label>Value
+										<input name="fields[filter][4][system:modification-date]" type="text">
+									</label>
+								</li>
+								<li class="unique template" data-type="author">
+									<header data-name="Author (Text Input)"><h4>Author</h4> <span>Text Input</span></header>
+									<label>Value
+										<input name="fields[filter][4][10]" type="text">
+									</label>
+								</li>
+								<li class="unique template" data-type="email">
+									<header data-name="Email (Text Input)"><h4>Email</h4> <span>Text Input</span></header>
+									<label>Value
+										<input name="fields[filter][4][11]" type="text">
+									</label>
+								</li>
+								<li class="unique template" data-type="website">
+									<header data-name="Website (Text Input)"><h4>Website</h4> <span>Text Input</span></header>
+									<label>Value
+										<input name="fields[filter][4][12]" type="text">
+									</label>
+								</li>
+								<li class="unique template" data-type="date">
+									<header data-name="Date (Date)"><h4>Date</h4> <span>Date</span></header>
+									<label>Value
+										<input name="fields[filter][4][13]" type="text">
+									</label>
+								</li>
+								<li class="unique template" data-type="article">
+									<header data-name="Article (Select Box Link)"><h4>Article</h4> <span>Select Box Link</span></header>
+									<label>Value
+										<input name="fields[filter][4][14]" type="text">
+									</label>
+								</li>
+								<li class="unique template" data-type="comment">
+									<header data-name="Comment (Textarea)"><h4>Comment</h4> <span>Textarea</span></header>
+									<label>Value
+										<input name="fields[filter][4][15]" type="text">
+									</label>
+								</li>
+							</ol>
+						</div>
+						<div class="contextual 5">
+							<ol class="filters-duplicator" data-add="Add filter" data-remove="Remove filter">
+								<li class="unique template" data-type="id">
+									<header><h4>System ID</h4></header>
+									<label>Value
+										<input name="fields[filter][5][id]" type="text">
+									</label>
+								</li>
+								<li class="unique template" data-type="system:creation-date">
+									<header><h4>System Creation Date</h4></header>
+									<label>Value
+										<input name="fields[filter][5][system:creation-date]" type="text">
+									</label>
+								</li>
+								<li class="unique template" data-type="system:modification-date">
+									<header><h4>System Modified Date</h4></header>
+									<label>Value
+										<input name="fields[filter][5][system:modification-date]" type="text">
+									</label>
+								</li>
+								<li class="unique template" data-type="image">
+									<header data-name="Image (File Upload)"><h4>Image</h4> <span>File Upload</span></header>
+									<label>Value
+										<input name="fields[filter][5][16]" type="text">
+									</label>
+								</li>
+								<li class="unique template" data-type="article">
+									<header data-name="Article (Select Box Link)"><h4>Article</h4> <span>Select Box Link</span></header>
+									<label>Value
+										<input name="fields[filter][5][17]" type="text">
+									</label>
+								</li>
+								<li class="unique template" data-type="description">
+									<header data-name="Description (Textarea)"><h4>Description</h4> <span>Textarea</span></header>
+									<label>Value
+										<input name="fields[filter][5][18]" type="text">
+									</label>
+								</li>
+							</ol>
+						</div>
+						<div class="contextual 6">
+							<ol class="filters-duplicator" data-add="Add filter" data-remove="Remove filter">
+								<li class="unique template" data-type="id">
+									<header><h4>System ID</h4></header>
+									<label>Value
+										<input name="fields[filter][6][id]" type="text">
+									</label>
+								</li>
+								<li class="unique template" data-type="system:creation-date">
+									<header><h4>System Creation Date</h4></header>
+									<label>Value
+										<input name="fields[filter][6][system:creation-date]" type="text">
+									</label>
+								</li>
+								<li class="unique template" data-type="system:modification-date">
+									<header><h4>System Modified Date</h4></header>
+									<label>Value
+										<input name="fields[filter][6][system:modification-date]" type="text">
+									</label>
+								</li>
+								<li class="unique template" data-type="name">
+									<header data-name="Name (Text Input)"><h4>Name</h4> <span>Text Input</span></header>
+									<label>Value
+										<input name="fields[filter][6][19]" type="text">
+									</label>
+								</li>
+								<li class="unique template" data-type="email">
+									<header data-name="Email (Text Input)"><h4>Email</h4> <span>Text Input</span></header>
+									<label>Value
+										<input name="fields[filter][6][20]" type="text">
+									</label>
+								</li>
+								<li class="unique template" data-type="subject">
+									<header data-name="Subject (Text Input)"><h4>Subject</h4> <span>Text Input</span></header>
+									<label>Value
+										<input name="fields[filter][6][21]" type="text">
+									</label>
+								</li>
+								<li class="unique template" data-type="message">
+									<header data-name="Message (Textarea)"><h4>Message</h4> <span>Textarea</span></header>
+									<label>Value
+										<input name="fields[filter][6][22]" type="text">
+									</label>
+								</li>
+							</ol>
+						</div>
+						<div class="contextual 3">
+							<ol class="filters-duplicator" data-add="Add filter" data-remove="Remove filter">
+								<li class="unique template" data-type="id">
+									<header><h4>System ID</h4></header>
+									<label>Value
+										<input name="fields[filter][3][id]" type="text">
+									</label>
+								</li>
+								<li class="unique template" data-type="system:creation-date">
+									<header><h4>System Creation Date</h4></header>
+									<label>Value
+										<input name="fields[filter][3][system:creation-date]" type="text">
+									</label>
+								</li>
+								<li class="unique template" data-type="system:modification-date">
+									<header><h4>System Modified Date</h4></header>
+									<label>Value
+										<input name="fields[filter][3][system:modification-date]" type="text">
+									</label>
+								</li>
+								<li class="unique template" data-type="date">
+									<header data-name="Date (Date)"><h4>Date</h4> <span>Date</span></header>
+									<label>Value
+										<input name="fields[filter][3][8]" type="text">
+									</label>
+								</li>
+								<li class="unique template" data-type="note">
+									<header data-name="Note (Textarea)"><h4>Note</h4> <span>Textarea</span></header>
+									<label>Value
+										<input name="fields[filter][3][9]" type="text">
+									</label>
+								</li>
+							</ol>
+						</div>
+						<div class="contextual authors">
+							<ol class="filters-duplicator" data-add="Add filter" data-remove="Remove filter">
+								<li class="unique template" data-type="id">
+									<header><h4>ID</h4></header>
+									<label>Value
+										<input name="fields[filter][author][id]" type="text">
+									</label>
+								</li>
+								<li class="unique template" data-type="username">
+									<header><h4>Username</h4></header>
+									<label>Value
+										<input name="fields[filter][author][username]" type="text">
+									</label>
+								</li>
+								<li class="unique template" data-type="first_name">
+									<header><h4>First Name</h4></header>
+									<label>Value
+										<input name="fields[filter][author][first_name]" type="text">
+									</label>
+								</li>
+								<li class="unique template" data-type="last_name">
+									<header><h4>Last Name</h4></header>
+									<label>Value
+										<input name="fields[filter][author][last_name]" type="text">
+									</label>
+								</li>
+								<li class="unique template" data-type="email">
+									<header><h4>Email</h4></header>
+									<label>Value
+										<input name="fields[filter][author][email]" type="text">
+									</label>
+								</li>
+								<li class="unique template" data-type="user_type">
+									<header><h4>User Type</h4></header>
+									<label>Value
+										<input name="fields[filter][author][user_type]" type="text">
+									</label>
+								</li>
+							</ol>
+						</div>
+						<div class="contextual navigation">
+							<ol class="filters-duplicator" data-add="Add filter" data-remove="Remove filter">
+								<li class="unique template" data-type="parent">
+									<header><h4>Parent Page</h4></header>
+									<label>Value
+										<input name="fields[filter][navigation][parent]" type="text">
+									</label>
+									<ul class="tags">
+										<li>/about</li>
+										<li>/archive</li>
+										<li>/articles</li>
+										<li>/drafts</li>
+										<li>/home</li>
+										<li>/maintenance</li>
+										<li>/page-not-found</li>
+										<li>/rss</li>
+									</ul>
+								</li>
+								<li class="unique template" data-type="type">
+									<header><h4>Page Type</h4></header>
+									<label>Value
+										<input name="fields[filter][navigation][type]" type="text">
+									</label>
+									<ul class="tags">
+										<li>index</li>
+										<li>XML</li>
+										<li>JSON</li>
+										<li>admin</li>
+										<li>404</li>
+										<li>403</li>
+										<li>hidden</li>
+										<li>maintenance</li>
+									</ul>
+								</li>
+							</ol>
+						</div>
+					</fieldset>
+					<fieldset class="settings contextual inverse navigation authors static_xml dynamic_xml from_extensions">
+						<legend>Sorting and Limiting</legend>
+						<p class="help contextual inverse navigation">Use <code>{$param}</code> syntax to limit by page parameters.</p>
+						<div class="two columns contextual sections Sections">
+							<label class="column">Sort By
+								<select name="fields[sort]" class="filtered">
+									<optgroup label="Authors">
+										<option value="id">Author ID</option>
+										<option value="username">Username</option>
+										<option value="first-name">First Name</option>
+										<option value="last-name">Last Name</option>
+										<option value="email">Email</option>
+										<option value="status">Status</option>
+									</optgroup>
+									<optgroup label="Navigation">
+										<option value="id">Page ID</option>
+										<option value="handle">Handle</option>
+										<option value="sortorder">Sort Order</option>
+									</optgroup>
+									<optgroup label="Articles">
+										<option value="system:id">System ID</option>
+										<option value="system:creation-date">System Creation Date</option>
+										<option value="system:modification-date">System Modification Date</option>
+										<option value="title">Title</option>
+										<option value="date">Date</option>
+										<option value="publish">Publish this article</option>
+									</optgroup>
+									<optgroup label="Categories">
+										<option value="system:id">System ID</option>
+										<option value="system:creation-date">System Creation Date</option>
+										<option value="system:modification-date">System Modification Date</option>
+										<option value="title">Title</option>
+									</optgroup>
+									<optgroup label="Comments">
+										<option value="system:id">System ID</option>
+										<option value="system:creation-date">System Creation Date</option>
+										<option value="system:modification-date">System Modification Date</option>
+										<option value="author">Author</option>
+										<option value="email">Email</option>
+										<option value="website">Website</option>
+										<option value="date">Date</option>
+									</optgroup>
+									<optgroup label="Images">
+										<option value="system:id">System ID</option>
+										<option value="system:creation-date">System Creation Date</option>
+										<option value="system:modification-date">System Modification Date</option>
+										<option value="image">Image</option>
+									</optgroup>
+									<optgroup label="Messages">
+										<option value="system:id">System ID</option>
+										<option value="system:creation-date">System Creation Date</option>
+										<option value="system:modification-date">System Modification Date</option>
+										<option value="name">Name</option>
+										<option value="email">Email</option>
+										<option value="subject">Subject</option>
+									</optgroup>
+									<optgroup label="Notes">
+										<option value="system:id" selected="selected">System ID</option>
+										<option value="system:creation-date">System Creation Date</option>
+										<option value="system:modification-date">System Modification Date</option>
+										<option value="date">Date</option>
+									</optgroup>
+								</select>
+							</label>
+							<label class="column">Sort Order
+								<select name="fields[order]">
+									<option value="asc">ascending</option>
+									<option value="desc" selected="selected">descending</option>
+									<option value="random">random</option>
+								</select>
+							</label>
+						</div>
+						<label><input name="fields[paginate_results]" type="checkbox" checked="checked" /> Paginate results, limiting to <input name="fields[max_records]" type="text" value="5" size="6" /> entries per page. Return page <input name="fields[page_number]" type="text" value="1" size="6" /></label>
+						<p class="help">Failing to paginate may degrade performance if the number of entries returned is very high.</p>
+					</fieldset>
+					<fieldset class="settings contextual inverse navigation static_xml dynamic_xml from_extensions">
+						<legend>Output Options</legend>
+						<label>Required URL Parameter
+							<i>Optional</i>
+							<input name="fields[required_url_param]" type="text" placeholder="$param">
+						</label>
+						<p class="help">An empty result will be returned when this parameter does not have a value.</p>
+						<label><input name="fields[redirect_on_empty]" type="checkbox" value="yes" /> Redirect to 404 page when no results are found</label>
+						<div class="two columns">
+							<fieldset class="column">
+								<legend>Output Parameters</legend>
+								<label>Use Fields
+									<select name="fields[param][]" class="filtered" multiple="multiple">
+										<optgroup label="Authors">
+											<option value="id">$ds-notes.id</option>
+											<option value="username">$ds-notes.username</option>
+											<option value="name">$ds-notes.name</option>
+											<option value="email">$ds-notes.email</option>
+											<option value="user_type">$ds-notes.user_type</option>
+										</optgroup>
+										<optgroup label="Articles">
+											<option value="system:id">$ds-notes.system-id</option>
+											<option value="system:creation-date">$ds-notes.system-creation-date</option>
+											<option value="system:modification-date">$ds-notes.system-modification-date</option>
+											<option value="system:author">$ds-notes.system-author</option>
+											<option value="title">$ds-notes.title</option>
+											<option value="date">$ds-notes.date</option>
+											<option value="categories">$ds-notes.categories</option>
+											<option value="publish">$ds-notes.publish</option>
+										</optgroup>
+										<optgroup label="Categories">
+											<option value="system:id">$ds-notes.system-id</option>
+											<option value="system:creation-date">$ds-notes.system-creation-date</option>
+											<option value="system:modification-date">$ds-notes.system-modification-date</option>
+											<option value="system:author">$ds-notes.system-author</option>
+											<option value="title">$ds-notes.title</option>
+										</optgroup>
+										<optgroup label="Comments">
+											<option value="system:id">$ds-notes.system-id</option>
+											<option value="system:creation-date">$ds-notes.system-creation-date</option>
+											<option value="system:modification-date">$ds-notes.system-modification-date</option>
+											<option value="system:author">$ds-notes.system-author</option>
+											<option value="author">$ds-notes.author</option>
+											<option value="email">$ds-notes.email</option>
+											<option value="website">$ds-notes.website</option>
+											<option value="date">$ds-notes.date</option>
+											<option value="article">$ds-notes.article</option>
+										</optgroup>
+										<optgroup label="Images">
+											<option value="system:id">$ds-notes.system-id</option>
+											<option value="system:creation-date">$ds-notes.system-creation-date</option>
+											<option value="system:modification-date">$ds-notes.system-modification-date</option>
+											<option value="system:author">$ds-notes.system-author</option>
+											<option value="article">$ds-notes.article</option>
+										</optgroup>
+										<optgroup label="Messages">
+											<option value="system:id">$ds-notes.system-id</option>
+											<option value="system:creation-date">$ds-notes.system-creation-date</option>
+											<option value="system:modification-date">$ds-notes.system-modification-date</option>
+											<option value="system:author">$ds-notes.system-author</option>
+											<option value="name">$ds-notes.name</option>
+											<option value="email">$ds-notes.email</option>
+											<option value="subject">$ds-notes.subject</option>
+										</optgroup>
+										<optgroup label="Notes">
+											<option value="system:id">$ds-notes.system-id</option>
+											<option value="system:creation-date">$ds-notes.system-creation-date</option>
+											<option value="system:modification-date">$ds-notes.system-modification-date</option>
+											<option value="system:author">$ds-notes.system-author</option>
+											<option value="date">$ds-notes.date</option>
+										</optgroup>
+									</select>
+								</label>
+							</fieldset>
+							<fieldset class="column">
+								<legend>XML Output</legend>
+								<label>Group By
+									<select name="fields[group]" class="filtered">
+										<option value="">None</option>
+										<optgroup label="Articles">
+											<option value="1">Title</option>
+											<option value="3">Date</option>
+											<option value="4">Categories</option>
+											<option value="5">Publish this article</option>
+											<option value="author">Author</option>
+										</optgroup>
+										<optgroup label="Categories">
+											<option value="6">Title</option>
+											<option value="author">Author</option>
+										</optgroup>
+										<optgroup label="Comments">
+											<option value="10">Author</option>
+											<option value="11">Email</option>
+											<option value="12">Website</option>
+											<option value="13">Date</option>
+											<option value="14">Article</option>
+										</optgroup>
+										<optgroup label="Images">
+											<option value="17">Article</option>
+											<option value="author">Author</option>
+										</optgroup>
+										<optgroup label="Messages">
+											<option value="19">Name</option>
+											<option value="20">Email</option>
+											<option value="21">Subject</option>
+											<option value="author">Author</option>
+										</optgroup>
+										<optgroup label="Notes">
+											<option value="8">Date</option>
+											<option value="author">Author</option>
+										</optgroup>
+									</select>
+								</label>
+								<label>Included Elements
+									<select name="fields[xml_elements][]" multiple="multiple" class="filtered">
+										<optgroup label="Authors">
+											<option value="username">username</option>
+											<option value="name">name</option>
+											<option value="email">email</option>
+											<option value="author-token">author-token</option>
+											<option value="default-area">default-area</option>
+										</optgroup>
+										<optgroup label="Articles">
+											<option value="system:pagination">system: pagination</option>
+											<option value="system:date">system: date</option>
+											<option value="title">title</option>
+											<option value="body: formatted">body: formatted</option>
+											<option value="body: unformatted">body: unformatted</option>
+											<option value="date">date</option>
+											<option value="categories">categories</option>
+											<option value="publish">publish</option>
+										</optgroup>
+										<optgroup label="Categories">
+											<option value="system:pagination">system: pagination</option>
+											<option value="system:date">system: date</option>
+											<option value="title">title</option>
+											<option value="description: formatted">description: formatted</option>
+											<option value="description: unformatted">description: unformatted</option>
+										</optgroup>
+										<optgroup label="Comments">
+											<option value="system:pagination">system: pagination</option>
+											<option value="system:date">system: date</option>
+											<option value="author">author</option>
+											<option value="email">email</option>
+											<option value="website">website</option>
+											<option value="date">date</option>
+											<option value="article">article</option>
+											<option value="comment: formatted">comment: formatted</option>
+											<option value="comment: unformatted">comment: unformatted</option>
+										</optgroup>
+										<optgroup label="Images">
+											<option value="system:pagination">system: pagination</option>
+											<option value="system:date">system: date</option>
+											<option value="image">image</option>
+											<option value="article">article</option>
+											<option value="description: formatted">description: formatted</option>
+											<option value="description: unformatted">description: unformatted</option>
+										</optgroup>
+										<optgroup label="Messages">
+											<option value="system:pagination">system: pagination</option>
+											<option value="system:date">system: date</option>
+											<option value="name">name</option>
+											<option value="email">email</option>
+											<option value="subject">subject</option>
+											<option value="message">message</option>
+										</optgroup>
+										<optgroup label="Notes">
+											<option value="system:pagination">system: pagination</option>
+											<option value="system:date">system: date</option>
+											<option value="date" selected="selected">date</option>
+											<option value="note: formatted" selected="selected">note: formatted</option>
+											<option value="note: unformatted">note: unformatted</option>
+										</optgroup>
+									</select>
+								</label>
+								<label class="contextual inverse authors"><input name="fields[associated_entry_counts]" type="checkbox" value="yes" checked="checked" /> Include a count of entries in associated sections</label>
+								<label class="contextual inverse authors"><input name="fields[html_encode]" type="checkbox" value="yes" /> HTML-encode text</label>
+							</fieldset>
+						</div>
+					</fieldset>
+					<fieldset class="settings contextual dynamic_xml">
+						<legend>Dynamic XML</legend>
+						<label>URL
+							<input name="fields[dynamic_xml][url]" type="text">
+							<p class="help">Use <code>{$param}</code> syntax to specify dynamic portions of the URL.</p>
+						</label>
+						<div>
+							<p class="label">Namespace Declarations
+								<i>Optional</i>
+							</p>
+							<ol class="filters-duplicator" data-add="Add namespace" data-remove="Remove namespace">
+								<li class="template" data-type="namespace">
+									<header><h4>Namespace</h4></header>
+									<div class="group">
+										<label>Name
+											<input name="fields[dynamic_xml][namespace][-1][name]" type="text">
+										</label>
+										<label>URI
+											<input name="fields[dynamic_xml][namespace][-1][uri]" type="text">
+										</label>
+									</div>
+								</li>
+							</ol>
+						</div>
+						<label>Included Elements
+							<input name="fields[dynamic_xml][xpath]" type="text">
+						</label>
+						<p class="help">Use an XPath expression to select which elements from the source XML to include.</p>
+						<label>Update cached result every <input name="fields[dynamic_xml][cache]" type="text" value="1" size="6" /> minutes</label>
+						<label>
+							<input name="fields[dynamic_xml][timeout]" type="hidden" value="1">
+						</label>
+					</fieldset>
+					<fieldset class="settings contextual static_xml">
+						<legend>Static XML</legend>
+						<label>Body
+							<textarea name="fields[static_xml]" rows="12" cols="50" class="code"></textarea>
+						</label>
+					</fieldset>
+					<div class="actions">
+						<input name="action[save]" type="submit" value="Save Changes" accesskey="s">
+						<button name="action[delete]" class="button confirm delete" title="Delete this data source" type="submit" accesskey="d" data-message="Are you sure you want to delete this data source?">Delete</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

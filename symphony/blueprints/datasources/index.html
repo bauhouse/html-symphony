@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../assets/css/symphony.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../assets/css/symphony.legacy.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../assets/css/symphony.grids.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../assets/css/symphony.frames.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../assets/css/symphony.forms.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../assets/css/symphony.tables.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../assets/css/symphony.drawers.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../assets/css/symphony.tabs.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../assets/css/symphony.notices.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../assets/css/admin.css">
+		<script type="text/javascript" src="../../assets/js/jquery.js"></script>
+		<script type="text/javascript" src="../../assets/js/symphony.js"></script>
+		<script type="text/javascript" src="../../assets/js/symphony.collapsible.js"></script>
+		<script type="text/javascript" src="../../assets/js/symphony.orderable.js"></script>
+		<script type="text/javascript" src="../../assets/js/symphony.selectable.js"></script>
+		<script type="text/javascript" src="../../assets/js/symphony.duplicator.js"></script>
+		<script type="text/javascript" src="../../assets/js/symphony.tags.js"></script>
+		<script type="text/javascript" src="../../assets/js/symphony.pickable.js"></script>
+		<script type="text/javascript" src="../../assets/js/symphony.timeago.js"></script>
+		<script type="text/javascript" src="../../assets/js/symphony.notify.js"></script>
+		<script type="text/javascript" src="../../assets/js/symphony.drawer.js"></script>
+		<script type="text/javascript" src="../../assets/js/admin.js"></script>
+		<script type="text/javascript">Symphony.Context.add('env', {"page-namespace":"\/blueprints\/datasources"}); Symphony.Context.add('root', 'http://home/sym/symphony-2');</script>
+		<title>Data Sources &ndash; Symphony</title>
+	</head>
+	<body id="blueprints-datasources" class="index">
+		<div id="wrapper">
+			<header id="header">
+				<p class="notice">Your Symphony installation is up to date, but the installer was still detected. For security reasons, it should be removed. <a href="#remove">Remove installer?</a></p>
+				<h1>
+					<a href="../../../">Symphony CMS</a>
+				</h1>
+				<ul id="session">
+					<li>
+						<a href="../../system/authors/edit/1/" data-id="1" data-name="John" data-type="developer">John Smith</a>
+					li>
+					<li>
+						<a href="../../../" accesskey="l">Log out</a>
+					</li>
+				</ul>
+				<nav id="nav">
+					<ul class="content">
+						<li>Content
+							<ul>
+								<li>
+									<a href="../../publish/articles/">Articles</a>
+								</li>
+								<li>
+									<a href="../../publish/categories/">Categories</a>
+								</li>
+								<li>
+									<a href="../../publish/notes/">Notes</a>
+								</li>
+								<li>
+									<a href="../../publish/comments/">Comments</a>
+								</li>
+								<li>
+									<a href="../../publish/messages/">Messages</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="structure">
+						<li class="active">Blueprints
+							<ul>
+								<li>
+									<a href="../../blueprints/pages/">Pages</a>
+								</li>
+								<li>
+									<a href="../../blueprints/sections/">Sections</a>
+								</li>
+								<li>
+									<a href="../../blueprints/datasources/">Data Sources</a>
+								</li>
+								<li>
+									<a href="../../blueprints/events/">Events</a>
+								</li>
+								<li>
+									<a href="../../blueprints/utilities/">Utilities</a>
+								</li>
+							</ul>
+						</li>
+						<li>System
+							<ul>
+								<li>
+									<a href="../../system/authors/">Authors</a>
+								</li>
+								<li>
+									<a href="../../system/preferences/">Preferences</a>
+								</li>
+								<li>
+									<a href="../../system/extensions/">Extensions</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</header>
+			<div id="context">
+				<div id="breadcrumbs">
+					<h2>Data Sources</h2>
+				</div>
+				<ul class="actions">
+					<li><a href="../../blueprints/datasources/new/" title="Create a new data source" class="create button" accesskey="c">Create New</a></li>
+				</ul>
+			</div>
+			<div id="contents">
+				<form action="../../blueprints/datasources/" method="post">
+					<table class="selectable">
+						<thead>
+							<tr>
+								<th scope="col">
+									<a href="?sort=name&amp;order=desc" title="Sort by descending name" class="active"><span>Name</span></a>
+								</th>
+								<th scope="col">
+									<a href="?sort=source&amp;order=asc" title="Sort by ascending source"><span>Source</span></a>
+								</th>
+								<th scope="col">Pages</th>
+								<th scope="col">
+									<a href="?sort=release-date&amp;order=asc" title="Sort by ascending release date"><span>Release Date</span></a>
+								</th>
+								<th scope="col">
+									<a href="?sort=author&amp;order=asc" title="Sort by ascending author"><span>Author</span></a>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<a href="../../blueprints/datasources/edit/archive/" title="archive">Archive</a>
+								</td>
+								<td>
+									<a href="../../blueprints/sections/edit/1/" title="articles">Articles</a>
+								</td>
+								<td class="pages"><a href="../../blueprints/pages/edit/68/">Archive</a></td>
+								<td>04 May 2010 00:00</td>
+								<td>
+									<a href="http://getsymphony.com">Symphony Team</a>
+									<input name="items[archive]" type="checkbox">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../blueprints/datasources/edit/article/" title="article">Article</a>
+								</td>
+								<td>
+									<a href="../../blueprints/sections/edit/1/" title="articles">Articles</a>
+								</td>
+								<td class="pages"><a href="../../blueprints/pages/edit/69/">Articles</a></td>
+								<td>04 May 2010 00:00</td>
+								<td>
+									<a href="http://getsymphony.com">Symphony Team</a>
+									<input name="items[article]" type="checkbox">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../blueprints/datasources/edit/article_images/" title="article_images">Article Images</a>
+								</td>
+								<td>
+									<a href="../../blueprints/sections/edit/5/" title="images">Images</a>
+								</td>
+								<td class="pages"><a href="../../blueprints/pages/edit/64/">Home</a>, <a href="../../blueprints/pages/edit/69/">Articles</a>, <a href="../../blueprints/pages/edit/70/">Drafts</a></td>
+								<td>04 May 2010 00:00</td>
+								<td>
+									<a href="http://getsymphony.com">Symphony Team</a>
+									<input name="items[article_images]" type="checkbox">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../blueprints/datasources/edit/comments/" title="comments">Comments</a>
+								</td>
+								<td>
+									<a href="../../blueprints/sections/edit/4/" title="comments">Comments</a>
+								</td>
+								<td class="pages"><a href="../../blueprints/pages/edit/69/">Articles</a></td>
+								<td>04 May 2010 00:00</td>
+								<td>
+									<a href="http://getsymphony.com">Symphony Team</a>
+									<input name="items[comments]" type="checkbox">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../blueprints/datasources/edit/drafts/" title="drafts">Drafts</a>
+								</td>
+								<td>
+									<a href="../../blueprints/sections/edit/1/" title="articles">Articles</a>
+								</td>
+								<td class="pages"><a href="../../blueprints/pages/edit/70/">Drafts</a></td>
+								<td>04 May 2010 00:00</td>
+								<td>
+									<a href="http://getsymphony.com">Symphony Team</a>
+									<input name="items[drafts]" type="checkbox">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../blueprints/datasources/edit/homepage_articles/" title="homepage_articles">Homepage Articles</a>
+								</td>
+								<td>
+									<a href="../../blueprints/sections/edit/1/" title="articles">Articles</a>
+								</td>
+								<td class="pages"><a href="../../blueprints/pages/edit/64/">Home</a></td>
+								<td>04 May 2010 00:00</td>
+								<td>
+									<a href="http://getsymphony.com">Symphony Team</a>
+									<input name="items[homepage_articles]" type="checkbox">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../blueprints/datasources/info/jit_image_manipulation_recipes/" title="jit_image_manipulation_recipes">JIT Image Manipulation Recipes</a>
+								</td>
+								<td class="inactive">Unknown</td>
+								<td class="inactive">None</td>
+								<td>17 May 2012 00:00</td>
+								<td>
+									<a href="http://getsymphony.com/">Symphony Team</a>
+									<input name="items[jit_image_manipulation_recipes]" type="checkbox">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../blueprints/datasources/edit/navigation/" title="navigation">Navigation</a>
+								</td>
+								<td>Navigation</td>
+								<td class="pages"><a href="../../blueprints/pages/edit/64/">Home</a>, <a href="../../blueprints/pages/edit/69/">Articles</a>, <a href="../../blueprints/pages/edit/70/">Drafts</a>, <a href="../../blueprints/pages/edit/68/">Archive</a>, <a href="../../blueprints/pages/edit/66/">About</a></td>
+								<td>04 May 2010 00:00</td>
+								<td>
+									<a href="http://getsymphony.com">Symphony Team</a>
+									<input name="items[navigation]" type="checkbox">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../blueprints/datasources/edit/notes/" title="notes">Notes</a>
+								</td>
+								<td>
+									<a href="../../blueprints/sections/edit/3/" title="notes">Notes</a>
+								</td>
+								<td class="pages"><a href="../../blueprints/pages/edit/64/">Home</a></td>
+								<td>04 May 2010 00:00</td>
+								<td>
+									<a href="http://getsymphony.com">Symphony Team</a>
+									<input name="items[notes]" type="checkbox">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../blueprints/datasources/edit/rss_articles/" title="rss_articles">RSS Articles</a>
+								</td>
+								<td>
+									<a href="../../blueprints/sections/edit/1/" title="articles">Articles</a>
+								</td>
+								<td class="pages"><a href="../../blueprints/pages/edit/67/">RSS</a></td>
+								<td>04 May 2010 00:00</td>
+								<td>
+									<a href="http://getsymphony.com">Symphony Team</a>
+									<input name="items[rss_articles]" type="checkbox">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../blueprints/datasources/edit/website_owner/" title="website_owner">Website Owner</a>
+								</td>
+								<td>Authors</td>
+								<td class="pages"><a href="../../blueprints/pages/edit/66/">About</a></td>
+								<td>04 May 2010 00:00</td>
+								<td>
+									<a href="http://getsymphony.com">Symphony Team</a>
+									<input name="items[website_owner]" type="checkbox">
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="actions">
+						<fieldset class="apply">
+							<div>
+								<select name="with-selected">
+									<option value="">With Selected...</option>
+									<option value="delete" class="confirm">Delete</option>
+									<optgroup label="Attach to Page">
+										<option value="attach-all-pages">All</option>
+										<option value="attach-to-page-64">Home</option>
+										<option value="attach-to-page-69">Articles</option>
+										<option value="attach-to-page-70">Drafts</option>
+										<option value="attach-to-page-68">Archive</option>
+										<option value="attach-to-page-66">About</option>
+										<option value="attach-to-page-67">RSS</option>
+										<option value="attach-to-page-75">Maintenance</option>
+										<option value="attach-to-page-76">Page Not Found</option>
+									</optgroup>
+									<optgroup label="Detach from Page">
+										<option value="detach-all-pages">All</option>
+										<option value="detach-from-page-64">Home</option>
+										<option value="detach-from-page-69">Articles</option>
+										<option value="detach-from-page-70">Drafts</option>
+										<option value="detach-from-page-68">Archive</option>
+										<option value="detach-from-page-66">About</option>
+										<option value="detach-from-page-67">RSS</option>
+										<option value="detach-from-page-75">Maintenance</option>
+										<option value="detach-from-page-76">Page Not Found</option>
+									</optgroup>
+								</select>
+							</div>
+							<button name="action[apply]" type="submit">Apply</button>
+						</fieldset>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

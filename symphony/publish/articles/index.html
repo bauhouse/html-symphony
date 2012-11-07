@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../assets/css/symphony.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../assets/css/symphony.legacy.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../assets/css/symphony.grids.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../assets/css/symphony.frames.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../assets/css/symphony.forms.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../assets/css/symphony.tables.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../assets/css/symphony.drawers.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../assets/css/symphony.tabs.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../assets/css/symphony.notices.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../assets/css/admin.css">
+		<script type="text/javascript" src="../../assets/js/jquery.js"></script>
+		<script type="text/javascript" src="../../assets/js/symphony.js"></script>
+		<script type="text/javascript" src="../../assets/js/symphony.collapsible.js"></script>
+		<script type="text/javascript" src="../../assets/js/symphony.orderable.js"></script>
+		<script type="text/javascript" src="../../assets/js/symphony.selectable.js"></script>
+		<script type="text/javascript" src="../../assets/js/symphony.duplicator.js"></script>
+		<script type="text/javascript" src="../../assets/js/symphony.tags.js"></script>
+		<script type="text/javascript" src="../../assets/js/symphony.pickable.js"></script>
+		<script type="text/javascript" src="../../assets/js/symphony.timeago.js"></script>
+		<script type="text/javascript" src="../../assets/js/symphony.notify.js"></script>
+		<script type="text/javascript" src="../../assets/js/symphony.drawer.js"></script>
+		<script type="text/javascript" src="../../assets/js/admin.js"></script>
+		<script type="text/javascript">Symphony.Context.add('env', {"page-namespace":"\/publish","section_handle":"articles","page":"index","entry_id":null,"flag":null}); Symphony.Context.add('root', 'http://home/sym/symphony-2');</script>
+		<title>Articles &ndash; Symphony</title>
+	</head>
+	<body id="publish" class="section-handle-articles page-index">
+		<div id="wrapper">
+			<header id="header">
+				<p class="notice">Your Symphony installation is up to date, but the installer was still detected. For security reasons, it should be removed. <a href="#remove">Remove installer?</a></p>
+				<h1>
+					<a href="../../../">Symphony CMS</a>
+				</h1>
+				<ul id="session">
+					<li>
+						<a href="../../system/authors/edit/1/" data-id="1" data-name="John" data-type="developer">John Smith</a>
+					</li>
+					<li>
+						<a href="../../../" accesskey="l">Log out</a>
+					</li>
+				</ul>
+				<nav id="nav">
+					<ul class="content">
+						<li class="active">Content
+							<ul>
+								<li>
+									<a href="../../publish/articles/">Articles</a>
+								</li>
+								<li>
+									<a href="../../publish/categories/">Categories</a>
+								</li>
+								<li>
+									<a href="../../publish/notes/">Notes</a>
+								</li>
+								<li>
+									<a href="../../publish/comments/">Comments</a>
+								</li>
+								<li>
+									<a href="../../publish/messages/">Messages</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="structure">
+						<li>Blueprints
+							<ul>
+								<li>
+									<a href="../../blueprints/pages/">Pages</a>
+								</li>
+								<li>
+									<a href="../../blueprints/sections/">Sections</a>
+								</li>
+								<li>
+									<a href="../../blueprints/datasources/">Data Sources</a>
+								</li>
+								<li>
+									<a href="../../blueprints/events/">Events</a>
+								</li>
+								<li>
+									<a href="../../blueprints/utilities/">Utilities</a>
+								</li>
+							</ul>
+						</li>
+						<li>System
+							<ul>
+								<li>
+									<a href="../../system/authors/">Authors</a>
+								</li>
+								<li>
+									<a href="../../system/preferences/">Preferences</a>
+								</li>
+								<li>
+									<a href="../../system/extensions/">Extensions</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</header>
+			<div id="context">
+				<div id="breadcrumbs">
+					<h2>Articles</h2>
+				</div>
+				<ul class="actions">
+					<li><a href="../../publish/articles/new/" title="Create a new entry" class="create button" accesskey="c">Create New</a></li>
+					<li><a href="../../blueprints/sections/edit/1" title="Edit Section Configuration" class="button">Edit Section</a></li>
+				</ul>
+			</div>
+			<div id="contents">
+				<form action="../../publish/articles/?pg=1" method="post">
+					<table class="selectable">
+						<thead>
+							<tr>
+								<th scope="col" id="field-1" class="field-input">
+									<a href="?sort=1&amp;order=asc" title="Sort by ascending title"><span>Title</span></a>
+								</th>
+								<th scope="col" id="field-3" class="field-date">
+									<a href="?sort=3&amp;order=asc" title="Sort by ascending date"><span>Date</span></a>
+								</th>
+								<th scope="col" id="field-4" class="field-selectbox_link">Categories</th>
+								<th scope="col" id="field-5" class="field-checkbox">
+									<a href="?sort=5&amp;order=asc" title="Sort by ascending publish this article"><span>Publish this article</span></a>
+								</th>
+								<th scope="col">Comments</th>
+								<th scope="col">Images</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr id="id-3">
+								<td class="field-input field-1"><a href="../../publish/articles/edit/3/" title="3" class="content">A primer to Symphony 2's default theme</a></td>
+								<td class="field-date field-3">02 January 2011 18:34</td>
+								<td class="field-selectbox_link field-4"><a href="../../publish/categories/edit/1/">Symphony</a></td>
+								<td class="field-checkbox field-5">Yes</td>
+								<td>
+									<a href="../../publish/comments/?filter=article:3" title="3" class="content">0 &rarr;</a>
+								</td>
+								<td>
+									<a href="../../publish/images/?filter=article:3" title="3" class="content">0 &rarr;</a>
+									<input name="items[3]" type="checkbox">
+								</td>
+							</tr>
+							<tr id="id-4">
+								<td class="field-input field-1"><a href="../../publish/articles/edit/4/" title="4" class="content">An example draft article</a></td>
+								<td class="field-date field-3">02 January 2011 19:57</td>
+								<td class="field-selectbox_link field-4"><a href="../../publish/categories/edit/2/">Announcement</a></td>
+								<td class="field-checkbox field-5">No</td>
+								<td>
+									<a href="../../publish/comments/?filter=article:4" title="4" class="content">0 &rarr;</a>
+								</td>
+								<td>
+									<a href="../../publish/images/?filter=article:4" title="4" class="content">0 &rarr;</a>
+									<input name="items[4]" type="checkbox">
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="actions">
+						<fieldset class="apply">
+							<div>
+								<select name="with-selected">
+									<option value="">With Selected...</option>
+									<option value="delete" class="confirm" data-message="Are you sure you want to delete the selected entries?">Delete</option>
+									<optgroup label="Set Categories">
+										<option value="toggle-4-1">Symphony</option>
+										<option value="toggle-4-2">Announcement</option>
+										<option value="toggle-4-">None</option>
+									</optgroup>
+									<optgroup label="Set Publish this article">
+										<option value="toggle-5-yes">Yes</option>
+										<option value="toggle-5-no">No</option>
+									</optgroup>
+								</select>
+							</div>
+							<button name="action[apply]" type="submit">Apply</button>
+						</fieldset>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

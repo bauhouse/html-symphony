@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../../../assets/css/symphony.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../../../assets/css/symphony.legacy.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../../../assets/css/symphony.grids.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../../../assets/css/symphony.frames.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../../../assets/css/symphony.forms.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../../../assets/css/symphony.tables.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../../../assets/css/symphony.drawers.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../../../assets/css/symphony.tabs.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../../../assets/css/symphony.notices.css">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../../../assets/css/admin.css">
+		<script type="text/javascript" src="../../../../assets/js/jquery.js"></script>
+		<script type="text/javascript" src="../../../../assets/js/symphony.js"></script>
+		<script type="text/javascript" src="../../../../assets/js/symphony.collapsible.js"></script>
+		<script type="text/javascript" src="../../../../assets/js/symphony.orderable.js"></script>
+		<script type="text/javascript" src="../../../../assets/js/symphony.selectable.js"></script>
+		<script type="text/javascript" src="../../../../assets/js/symphony.duplicator.js"></script>
+		<script type="text/javascript" src="../../../../assets/js/symphony.tags.js"></script>
+		<script type="text/javascript" src="../../../../assets/js/symphony.pickable.js"></script>
+		<script type="text/javascript" src="../../../../assets/js/symphony.timeago.js"></script>
+		<script type="text/javascript" src="../../../../assets/js/symphony.notify.js"></script>
+		<script type="text/javascript" src="../../../../assets/js/symphony.drawer.js"></script>
+		<script type="text/javascript" src="../../../../assets/js/admin.js"></script>
+		<script type="text/javascript">Symphony.Context.add('env', {"page-namespace":"\/blueprints\/utilities","0":"edit","1":"get-article"}); Symphony.Context.add('root', 'http://home/sym/symphony-2');</script>
+		<title>get-article.xsl &ndash; Utilities &ndash; Symphony</title>
+	</head>
+	<body id="blueprints-utilities" class="edit get-article single">
+		<div id="wrapper">
+			<header id="header">
+				<p class="notice">Your Symphony installation is up to date, but the installer was still detected. For security reasons, it should be removed. <a href="#remove">Remove installer?</a></p>
+				<h1>
+					<a href="../../../../../">Symphony CMS</a>
+				</h1>
+				<ul id="session">
+					<li>
+						<a href="../../../../system/authors/edit/1/" data-id="1" data-name="John" data-type="developer">John Smith</a>
+					</li>
+					<li>
+						<a href="../../../../../" accesskey="l">Log out</a>
+					</li>
+				</ul>
+				<nav id="nav">
+					<ul class="content">
+						<li>Content
+							<ul>
+								<li>
+									<a href="../../../../publish/articles/">Articles</a>
+								</li>
+								<li>
+									<a href="../../../../publish/categories/">Categories</a>
+								</li>
+								<li>
+									<a href="../../../../publish/notes/">Notes</a>
+								</li>
+								<li>
+									<a href="../../../../publish/comments/">Comments</a>
+								</li>
+								<li>
+									<a href="../../../../publish/messages/">Messages</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="structure">
+						<li class="active">Blueprints
+							<ul>
+								<li>
+									<a href="../../../../blueprints/pages/">Pages</a>
+								</li>
+								<li>
+									<a href="../../../../blueprints/sections/">Sections</a>
+								</li>
+								<li>
+									<a href="../../../../blueprints/datasources/">Data Sources</a>
+								</li>
+								<li>
+									<a href="../../../../blueprints/events/">Events</a>
+								</li>
+								<li>
+									<a href="../../../../blueprints/utilities/">Utilities</a>
+								</li>
+							</ul>
+						</li>
+						<li>System
+							<ul>
+								<li>
+									<a href="../../../../system/authors/">Authors</a>
+								</li>
+								<li>
+									<a href="../../../../system/preferences/">Preferences</a>
+								</li>
+								<li>
+									<a href="../../../../system/extensions/">Extensions</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</header>
+			<div id="context">
+				<div id="breadcrumbs">
+					<nav>
+						<p>
+							<a href="../../../../blueprints/utilities/">Utilities</a>
+							<span class="sep">&#8250;</span>
+						</p>
+					</nav>
+					<h2>get-article.xsl</h2>
+				</div>
+			</div>
+			<div id="contents">
+				<form action="../../../../blueprints/utilities/edit/get-article/" method="post" class="two columns">
+					<fieldset class="primary column">
+						<label>Name
+							<input name="fields[name]" type="text" value="get-article.xsl">
+						</label>
+						<label>Body
+							<textarea name="fields[body]" rows="30" cols="80" class="code">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;xsl:stylesheet version=&quot;1.0&quot; xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot;&gt;
+
+&lt;xsl:import href=&quot;typography.xsl&quot;/&gt;
+&lt;xsl:import href=&quot;get-images.xsl&quot;/&gt;
+
+&lt;xsl:template match=&quot;homepage-articles/entry&quot;&gt;
+	&lt;div class=&quot;article&quot;&gt;
+		&lt;h3&gt;
+			&lt;xsl:call-template name=&quot;format-date&quot;&gt;
+				&lt;xsl:with-param name=&quot;date&quot; select=&quot;date&quot;/&gt;
+				&lt;xsl:with-param name=&quot;format&quot; select=&quot;'D m Y'&quot;/&gt;
+			&lt;/xsl:call-template&gt;
+			&lt;xsl:if test=&quot;$is-logged-in = 'true'&quot;&gt;
+				&lt;xsl:text&gt; &amp;#8212; &lt;/xsl:text&gt;
+				&lt;a class=&quot;edit&quot; href=&quot;{$root}/symphony/publish/{../section/@handle}/edit/{@id}/&quot;&gt;Edit&lt;/a&gt;
+			&lt;/xsl:if&gt;
+		&lt;/h3&gt;
+		&lt;h2&gt;
+			&lt;a href=&quot;{$root}/articles/{title/@handle}/&quot;&gt;&lt;xsl:value-of select=&quot;title&quot;/&gt;&lt;/a&gt;
+		&lt;/h2&gt;
+		&lt;ul class=&quot;meta&quot;&gt;
+			&lt;li class=&quot;icon-filed-under&quot;&gt;
+				&lt;xsl:apply-templates select=&quot;categories/item&quot;/&gt;
+			&lt;/li&gt;
+			&lt;li class=&quot;icon-comments&quot;&gt;
+				&lt;a href=&quot;{$root}/articles/{title/@handle}/#comments&quot;&gt;
+					&lt;xsl:text&gt;Comments (&lt;/xsl:text&gt;
+					&lt;xsl:value-of select=&quot;@comments&quot;/&gt;
+					&lt;xsl:text&gt;)&lt;/xsl:text&gt;
+				&lt;/a&gt;
+			&lt;/li&gt;
+		&lt;/ul&gt;
+		&lt;xsl:apply-templates select=&quot;body/*[position() &amp;lt;= 2]&quot; mode=&quot;html&quot;/&gt;
+		&lt;xsl:call-template name=&quot;get-images&quot;&gt;
+			&lt;xsl:with-param name=&quot;entry-id&quot; select=&quot;@id&quot;/&gt;
+		&lt;/xsl:call-template&gt;
+		&lt;xsl:apply-templates select=&quot;body/*[position() &amp;gt; 2 and position() &amp;lt;= 4]&quot; mode=&quot;html&quot;/&gt;
+	&lt;/div&gt;
+	&lt;hr/&gt;
+&lt;/xsl:template&gt;
+
+&lt;xsl:template match=&quot;article/entry&quot;&gt;
+	&lt;div class=&quot;article&quot;&gt;
+		&lt;h3&gt;
+			&lt;xsl:call-template name=&quot;format-date&quot;&gt;
+				&lt;xsl:with-param name=&quot;date&quot; select=&quot;date&quot;/&gt;
+				&lt;xsl:with-param name=&quot;format&quot; select=&quot;'D m Y'&quot;/&gt;
+			&lt;/xsl:call-template&gt;
+			&lt;xsl:if test=&quot;$is-logged-in = 'true'&quot;&gt;
+				&lt;xsl:text&gt; &amp;#8212; &lt;/xsl:text&gt;
+				&lt;a class=&quot;edit&quot; href=&quot;{$root}/symphony/publish/{../section/@handle}/edit/{@id}/&quot;&gt;Edit&lt;/a&gt;
+			&lt;/xsl:if&gt;
+		&lt;/h3&gt;
+		&lt;h2&gt;
+			&lt;a href=&quot;{$root}/articles/{title/@handle}/&quot;&gt;&lt;xsl:value-of select=&quot;title&quot;/&gt;&lt;/a&gt;
+		&lt;/h2&gt;
+		&lt;ul class=&quot;meta&quot;&gt;
+			&lt;li class=&quot;icon-filed-under&quot;&gt;
+				&lt;xsl:apply-templates select=&quot;categories/item&quot;/&gt;
+			&lt;/li&gt;
+			&lt;li class=&quot;icon-comments&quot;&gt;
+				&lt;a href=&quot;{$root}/articles/{title/@handle}/#comments&quot;&gt;
+					&lt;xsl:text&gt;Comments (&lt;/xsl:text&gt;
+					&lt;xsl:value-of select=&quot;@comments&quot;/&gt;
+					&lt;xsl:text&gt;)&lt;/xsl:text&gt;
+				&lt;/a&gt;
+			&lt;/li&gt;
+		&lt;/ul&gt;
+		&lt;xsl:apply-templates select=&quot;body/*[position() &amp;lt;= 2]&quot; mode=&quot;html&quot;/&gt;
+		&lt;xsl:call-template name=&quot;get-images&quot;&gt;
+			&lt;xsl:with-param name=&quot;entry-id&quot; select=&quot;@id&quot;/&gt;
+		&lt;/xsl:call-template&gt;
+		&lt;xsl:apply-templates select=&quot;body/*[position() &amp;gt; 2]&quot; mode=&quot;html&quot;/&gt;
+	&lt;/div&gt;
+	&lt;hr/&gt;
+&lt;/xsl:template&gt;
+
+&lt;xsl:template match=&quot;categories/item&quot;&gt;
+	&lt;xsl:value-of select=&quot;.&quot;/&gt;
+	&lt;xsl:if test=&quot;position() != last()&quot;&gt;
+		&lt;xsl:text&gt;, &lt;/xsl:text&gt;
+	&lt;/xsl:if&gt;
+&lt;/xsl:template&gt;
+
+&lt;/xsl:stylesheet&gt;</textarea>
+						</label>
+					</fieldset>
+					<div class="secondary column">
+						<p class="label">Utilities</p>
+						<div class="frame">
+							<ul id="utilities">
+								<li>
+									<a href="../../../../blueprints/utilities/edit/date-time/">date-time.xsl</a>
+								</li>
+								<li>
+									<a href="../../../../blueprints/utilities/edit/get-archive/">get-archive.xsl</a>
+								</li>
+								<li>
+									<a href="../../../../blueprints/utilities/edit/get-article/">get-article.xsl</a>
+								</li>
+								<li>
+									<a href="../../../../blueprints/utilities/edit/get-comments/">get-comments.xsl</a>
+								</li>
+								<li>
+									<a href="../../../../blueprints/utilities/edit/get-drafts/">get-drafts.xsl</a>
+								</li>
+								<li>
+									<a href="../../../../blueprints/utilities/edit/get-images/">get-images.xsl</a>
+								</li>
+								<li>
+									<a href="../../../../blueprints/utilities/edit/get-notes/">get-notes.xsl</a>
+								</li>
+								<li>
+									<a href="../../../../blueprints/utilities/edit/master/">master.xsl</a>
+								</li>
+								<li>
+									<a href="../../../../blueprints/utilities/edit/navigation/">navigation.xsl</a>
+								</li>
+								<li>
+									<a href="../../../../blueprints/utilities/edit/page-title/">page-title.xsl</a>
+								</li>
+								<li>
+									<a href="../../../../blueprints/utilities/edit/typography/">typography.xsl</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="actions">
+						<input name="action[save]" type="submit" value="Save Changes" accesskey="s">
+						<button name="action[delete]" class="button confirm delete" title="Delete this utility" type="submit" accesskey="d" data-message="Are you sure you want to delete this Utility?">Delete</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
