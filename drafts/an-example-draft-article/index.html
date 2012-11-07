@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Symphony CMS — Drafts</title>
+    <link rel="icon" type="images/png" href="../../workspace/images/icons/bookmark.png" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../../workspace/css/styles.css" />
+    <link rel="alternate" type="application/rss+xml" href="../../rss/index.xml" />
+  </head>
+  <body>
+    <div id="masthead">
+      <h1>
+        <a href="../../">Symphony CMS</a>
+      </h1>
+      <ul id="menu">
+        <li>
+          <a href="../../archive/">Archive</a>
+        </li>
+        <li>
+          <a href="../../about/">About</a>
+        </li>
+        <li>
+          <a href="../../drafts/">Drafts</a>
+        </li>
+        <li>
+          <a href="../../symphony/publish/articles/">Admin</a>
+        </li>
+        <li>
+          <a href="../../debug/">Debug</a>
+        </li>
+      </ul>
+    </div>
+    <div id="package">
+      <p class="date">07<span>Nov</span></p>
+      <div id="content">
+        <div id="article">
+          <div class="article">
+            <h3>2nd Jan 2011 — <a class="edit" href="../../symphony/publish/articles/edit/4/">Edit</a></h3>
+            <h2>
+              <a href="../../articles/an-example-draft-article/">An example draft article</a>
+            </h2>
+            <ul class="meta">
+              <li class="icon-filed-under">Announcement</li>
+            </ul>
+            <p>This is an example draft article. Feel free to test the system by pressing the <em>publish</em> button.</p>
+          </div>
+          <hr />
+          <form id="publish-article" action="" method="post">
+            <fieldset>
+              <input name="fields[publish]" value="yes" type="hidden" />
+              <input name="redirect" value="../../articles/an-example-draft-article/" type="hidden" />
+              <input name="id" value="4" type="hidden" />
+              <button id="submit" type="submit" name="action[publish-article]" value="Publish"></button>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+    <ul id="footer">
+      <li>Orchestrated by <a class="symphony" href="http://getsymphony.com/">Symphony</a></li>
+      <li>Broadcasted via <a class="rss" href="../../rss/index.xml">XML Feed</a></li>
+    </ul>
+  </body>
+</html>
