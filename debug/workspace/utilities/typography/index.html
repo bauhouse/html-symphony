@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../../../symphony/assets/css/devkit.css">
+		<title>Home &ndash; Debug &ndash; Symphony</title>
+		<link rel="stylesheet" type="text/css" media="screen" href="../../../../extensions/debugdevkit/assets/devkit.css">
+		<script type="text/javascript" src="../../../../symphony/assets/js/jquery.js"></script>
+		<script type="text/javascript" src="../../../../extensions/debugdevkit/assets/jquery.scrollto.js"></script>
+		<script type="text/javascript" src="../../../../extensions/debugdevkit/assets/devkit.js"></script>
+	</head>
+	<body>
+		<div id="header">
+			<h1>
+				<a href=".">Home</a>
+			</h1>
+			<ul id="navigation">
+				<li>
+					<a href="../../../../symphony/blueprints/pages/edit/64/">Edit</a>
+				</li>
+				<li>Debug</li>
+				<li>
+					<a href="../../../../profile/">Profile</a>
+				</li>
+			</ul>
+			<div id="jump">
+				<ul>
+					<li>
+						<a href="../../../../debug/params/" class="inactive">Params</a>
+					</li>
+					<li>
+						<a href="../../../../debug/xml/" class="inactive">XML</a>
+					</li>
+					<li>
+						<a href="../../../../debug/workspace/pages/home/" class="inactive">home.xsl</a>
+						<ul>
+							<li>
+								<a href="../../../../debug/workspace/utilities/master/" class="inactive">master.xsl</a>
+								<ul>
+									<li>
+										<a href="../../../../debug/workspace/utilities/page-title/" class="inactive">page-title.xsl</a>
+									</li>
+									<li>
+										<a href="../../../../debug/workspace/utilities/navigation/" class="inactive">navigation.xsl</a>
+									</li>
+									<li>
+										<a href="../../../../debug/workspace/utilities/date-time/" class="inactive">date-time.xsl</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="../../../../debug/workspace/utilities/get-article/" class="inactive">get-article.xsl</a>
+								<ul>
+									<li>
+										<a href="../../../../debug/workspace/utilities/typography/" class="active">typography.xsl</a>
+									</li>
+									<li>
+										<a href="../../../../debug/workspace/utilities/get-images/" class="inactive">get-images.xsl</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="../../../../debug/workspace/utilities/get-notes/" class="inactive">get-notes.xsl</a>
+							</li>
+							<li>
+								<a href="../../../../debug/workspace/utilities/get-comments/" class="inactive">get-comments.xsl</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="../../../../debug/result/" class="inactive">Result</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="content">
+			<div id="source"><pre><line id="1"><marker></marker><content><span class="context-markup xml xsl"><span class="declaration open close"><span class="begin">&lt;?xml</span> <span class="attribute">version=</span><span class="value">'1.0'</span> <span class="attribute">encoding=</span><span class="value">'utf-8'</span><span class="end">?&gt;</span></span><span class="text"></span></span></content></line>
+<line id="2"><marker></marker><content><span class="context-markup xml xsl"><span class="text"></span><span class="tag open"><span class="begin">&lt;xsl:stylesheet</span> <span class="attribute">version=</span><span class="value">"1.0"</span> <span class="attribute">xmlns:xsl=</span><span class="value">"http://www.w3.org/1999/XSL/Transform"</span><span class="end">&gt;</span></span><span class="text"></span></span></content></line>
+<line id="3"><marker></marker><content><span class="context-markup xml xsl"><span class="text"></span></span></content></line>
+<line id="4"><marker></marker><content><span class="context-markup xml xsl"><span class="text"></span><span class="comment"><span class="start">&lt;!--</span></span></span></content></line>
+<line id="5"><marker></marker><content><span class="context-markup xml xsl"><span class="comment">Name: HTML Manipulation</span></span></content></line>
+<line id="6"><marker></marker><content><span class="context-markup xml xsl"><span class="comment">Version: 1.0</span></span></content></line>
+<line id="7"><marker></marker><content><span class="context-markup xml xsl"><span class="comment">Author: Allen Chang &lt;allen@chaoticpattern.com&gt;</span></span></content></line>
+<line id="8"><marker></marker><content><span class="context-markup xml xsl"><span class="comment">URL: http://symphony21.com/downloads/xslt/file/20035/</span></span></content></line>
+<line id="9"><marker></marker><content><span class="context-markup xml xsl"><span class="comment"></span></span></content></line>
+<line id="10"><marker></marker><content><span class="context-markup xml xsl"><span class="comment">Description:</span></span></content></line>
+<line id="11"><marker></marker><content><span class="context-markup xml xsl"><span class="comment">This is the starter utility (dubbed "The Ninja Technique") in which all awesome HTML manipulation works off.</span></span></content></line>
+<line id="12"><marker></marker><content><span class="context-markup xml xsl"><span class="comment">Be sure to check out http://chaoticpattern.com/article/manipulating-html-in-xml/ for more info.</span></span></content></line>
+<line id="13"><marker></marker><content><span class="context-markup xml xsl"><span class="comment"></span></span></content></line>
+<line id="14"><marker></marker><content><span class="context-markup xml xsl"><span class="comment">Usage:</span></span></content></line>
+<line id="15"><marker></marker><content><span class="context-markup xml xsl"><span class="comment">1. Invoke the HTML output using: &lt;xsl:apply-templates select="path/to/your/body/*" mode="html"/&gt;.</span></span></content></line>
+<line id="16"><marker></marker><content><span class="context-markup xml xsl"><span class="comment">2. Write your own overriding matching templates to manipulate the HTML.</span></span></content></line>
+<line id="17"><marker></marker><content><span class="context-markup xml xsl"><span class="comment"><span class="stop">--&gt;</span></span><span class="text"></span></span></content></line>
+<line id="18"><marker></marker><content><span class="context-markup xml xsl"><span class="text"></span></span></content></line>
+<line id="19"><marker></marker><content><span class="context-markup xml xsl"><span class="text"></span><span class="tag open"><span class="begin">&lt;xsl:template</span> <span class="attribute">match=</span><span class="value">"*"</span> <span class="attribute">mode=</span><span class="value">"html"</span><span class="end">&gt;</span></span><span class="text"></span></span></content></line>
+<line id="20"><marker></marker><content><span class="context-markup xml xsl"><span class="text">  </span><span class="tag open"><span class="begin">&lt;xsl:element</span> <span class="attribute">name=</span><span class="value">"<span class="xpath">{name()}</span>"</span><span class="end">&gt;</span></span><span class="text"></span></span></content></line>
+<line id="21"><marker></marker><content><span class="context-markup xml xsl"><span class="text">    </span><span class="tag open"><span class="begin">&lt;xsl:apply-templates</span> <span class="attribute">select=</span><span class="value">"* | @* | text()"</span> <span class="attribute">mode=</span><span class="value">"html"</span><span class="end">/&gt;</span></span><span class="text"></span></span></content></line>
+<line id="22"><marker></marker><content><span class="context-markup xml xsl"><span class="text">  </span><span class="tag close">&lt;/xsl:element&gt;</span><span class="text"></span></span></content></line>
+<line id="23"><marker></marker><content><span class="context-markup xml xsl"><span class="text"></span><span class="tag close">&lt;/xsl:template&gt;</span><span class="text"></span></span></content></line>
+<line id="24"><marker></marker><content><span class="context-markup xml xsl"><span class="text"></span></span></content></line>
+<line id="25"><marker></marker><content><span class="context-markup xml xsl"><span class="text"></span><span class="tag open"><span class="begin">&lt;xsl:template</span> <span class="attribute">match=</span><span class="value">"@*"</span> <span class="attribute">mode=</span><span class="value">"html"</span><span class="end">&gt;</span></span><span class="text"></span></span></content></line>
+<line id="26"><marker></marker><content><span class="context-markup xml xsl"><span class="text">  </span><span class="tag open"><span class="begin">&lt;xsl:attribute</span> <span class="attribute">name=</span><span class="value">"<span class="xpath">{name()}</span>"</span><span class="end">&gt;</span></span><span class="text"></span></span></content></line>
+<line id="27"><marker></marker><content><span class="context-markup xml xsl"><span class="text">    </span><span class="tag open"><span class="begin">&lt;xsl:value-of</span> <span class="attribute">select=</span><span class="value">"."</span><span class="end">/&gt;</span></span><span class="text"></span></span></content></line>
+<line id="28"><marker></marker><content><span class="context-markup xml xsl"><span class="text">  </span><span class="tag close">&lt;/xsl:attribute&gt;</span><span class="text"></span></span></content></line>
+<line id="29"><marker></marker><content><span class="context-markup xml xsl"><span class="text"></span><span class="tag close">&lt;/xsl:template&gt;</span><span class="text"></span></span></content></line>
+<line id="30"><marker></marker><content><span class="context-markup xml xsl"><span class="text"></span></span></content></line>
+<line id="31"><marker></marker><content><span class="context-markup xml xsl"><span class="text"></span><span class="tag close">&lt;/xsl:stylesheet&gt;</span></span></content></line></pre></div>
+		</div>
+	</body>
+</html>

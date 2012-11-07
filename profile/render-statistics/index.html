@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../symphony/assets/css/devkit.css">
+		<title>Home &ndash; Profile &ndash; Symphony</title>
+		<link rel="stylesheet" type="text/css" media="screen" href="../../extensions/profiledevkit/assets/devkit.css">
+	</head>
+	<body>
+		<div id="header">
+			<h1>
+				<a href="../../">Home</a>
+			</h1>
+			<ul id="navigation">
+				<li>
+					<a href="../../symphony/blueprints/pages/edit/64/">Edit</a>
+				</li>
+				<li>
+					<a href="../../debug/">Debug</a>
+				</li>
+				<li>Profile</li>
+			</ul>
+			<div id="jump">
+				<ul>
+					<li>
+						<a href="../../profile/general/" class="inactive">General Details</a>
+					</li>
+					<li>
+						<a href="../../profile/data-sources/" class="inactive">Datasource Execution</a>
+					</li>
+					<li>
+						<a href="../../profile/events/" class="inactive">Event Execution</a>
+					</li>
+					<li>
+						<a href="../../profile/render-statistics/" class="active">Full Page Render Statistics</a>
+					</li>
+					<li>
+						<a href="../../profile/memory-usage/" class="inactive">Memory Usage</a>
+					</li>
+					<li>
+						<a href="../../profile/database-queries/" class="inactive">Database Queries</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="content">
+			<table id="render-statistics">
+				<tr>
+					<th>Total Database Queries</th>
+					<td>51</td>
+				</tr>
+				<tr>
+					<th>Slow Queries (> 0.09s)</th>
+					<td>0</td>
+				</tr>
+				<tr>
+					<th>Total Time Spent on Queries</th>
+					<td>0.0113 s</td>
+				</tr>
+				<tr>
+					<th>Time Triggering All Events</th>
+					<td>0.0004 s</td>
+				</tr>
+				<tr>
+					<th>Time Running All Data Sources</th>
+					<td>0.0248 s</td>
+				</tr>
+				<tr>
+					<th>XML Generation Function</th>
+					<td>0.0017 s</td>
+				</tr>
+				<tr>
+					<th>XSLT Generation</th>
+					<td>0.0074 s</td>
+				</tr>
+				<tr>
+					<th>Output Creation Time</th>
+					<td>0.0000 s</td>
+				</tr>
+				<tr>
+					<th>Total Memory Usage</th>
+					<td>3.22 MB</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>

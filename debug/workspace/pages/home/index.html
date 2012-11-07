@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel="stylesheet" type="text/css" media="screen" href="../../../../symphony/assets/css/devkit.css">
+		<title>Home &ndash; Debug &ndash; Symphony</title>
+		<link rel="stylesheet" type="text/css" media="screen" href="../../../../extensions/debugdevkit/assets/devkit.css">
+		<script type="text/javascript" src="../../../../symphony/assets/js/jquery.js"></script>
+		<script type="text/javascript" src="../../../../extensions/debugdevkit/assets/jquery.scrollto.js"></script>
+		<script type="text/javascript" src="../../../../extensions/debugdevkit/assets/devkit.js"></script>
+	</head>
+	<body>
+		<div id="header">
+			<h1>
+				<a href=".">Home</a>
+			</h1>
+			<ul id="navigation">
+				<li>
+					<a href="../../../../symphony/blueprints/pages/edit/64/">Edit</a>
+				</li>
+				<li>Debug</li>
+				<li>
+					<a href="../../../../profile/">Profile</a>
+				</li>
+			</ul>
+			<div id="jump">
+				<ul>
+					<li>
+						<a href="../../../../debug/params/" class="inactive">Params</a>
+					</li>
+					<li>
+						<a href="../../../../debug/xml/" class="inactive">XML</a>
+					</li>
+					<li>
+						<a href="../../../../debug/workspace/pages/home/" class="active">home.xsl</a>
+						<ul>
+							<li>
+								<a href="../../../../debug/workspace/utilities/master/" class="inactive">master.xsl</a>
+								<ul>
+									<li>
+										<a href="../../../../debug/workspace/utilities/page-title/" class="inactive">page-title.xsl</a>
+									</li>
+									<li>
+										<a href="../../../../debug/workspace/utilities/navigation/" class="inactive">navigation.xsl</a>
+									</li>
+									<li>
+										<a href="../../../../debug/workspace/utilities/date-time/" class="inactive">date-time.xsl</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="../../../../debug/workspace/utilities/get-article/" class="inactive">get-article.xsl</a>
+								<ul>
+									<li>
+										<a href="../../../../debug/workspace/utilities/typography/" class="inactive">typography.xsl</a>
+									</li>
+									<li>
+										<a href="../../../../debug/workspace/utilities/get-images/" class="inactive">get-images.xsl</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="../../../../debug/workspace/utilities/get-notes/" class="inactive">get-notes.xsl</a>
+							</li>
+							<li>
+								<a href="../../../../debug/workspace/utilities/get-comments/" class="inactive">get-comments.xsl</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="../../../../debug/result/" class="inactive">Result</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="content">
+			<div id="source"><pre><line id="1"><marker></marker><content><span class="context-markup xml xsl"><span class="declaration open close"><span class="begin">&lt;?xml</span> <span class="attribute">version=</span><span class="value">"1.0"</span> <span class="attribute">encoding=</span><span class="value">"UTF-8"</span><span class="end">?&gt;</span></span><span class="text"></span></span></content></line>
+<line id="2"><marker></marker><content><span class="context-markup xml xsl"><span class="text"></span><span class="tag open"><span class="begin">&lt;xsl:stylesheet</span> <span class="attribute">version=</span><span class="value">"1.0"</span> <span class="attribute">xmlns:xsl=</span><span class="value">"http://www.w3.org/1999/XSL/Transform"</span><span class="end">&gt;</span></span><span class="text"></span></span></content></line>
+<line id="3"><marker></marker><content><span class="context-markup xml xsl"><span class="text"></span></span></content></line>
+<line id="4"><marker></marker><content><span class="context-markup xml xsl"><span class="text"></span><span class="tag open"><span class="begin">&lt;xsl:import</span> <span class="attribute">href=</span><span class="value">"../utilities/master.xsl"</span><span class="end">/&gt;</span></span><span class="text"></span></span></content></line>
+<line id="5"><marker></marker><content><span class="context-markup xml xsl"><span class="text"></span><span class="tag open"><span class="begin">&lt;xsl:import</span> <span class="attribute">href=</span><span class="value">"../utilities/get-article.xsl"</span><span class="end">/&gt;</span></span><span class="text"></span></span></content></line>
+<line id="6"><marker></marker><content><span class="context-markup xml xsl"><span class="text"></span><span class="tag open"><span class="begin">&lt;xsl:import</span> <span class="attribute">href=</span><span class="value">"../utilities/get-notes.xsl"</span><span class="end">/&gt;</span></span><span class="text"></span></span></content></line>
+<line id="7"><marker></marker><content><span class="context-markup xml xsl"><span class="text"></span><span class="tag open"><span class="begin">&lt;xsl:import</span> <span class="attribute">href=</span><span class="value">"../utilities/get-comments.xsl"</span><span class="end">/&gt;</span></span><span class="text"></span></span></content></line>
+<line id="8"><marker></marker><content><span class="context-markup xml xsl"><span class="text"></span></span></content></line>
+<line id="9"><marker></marker><content><span class="context-markup xml xsl"><span class="text"></span><span class="tag open"><span class="begin">&lt;xsl:template</span> <span class="attribute">match=</span><span class="value">"data"</span><span class="end">&gt;</span></span><span class="text"></span></span></content></line>
+<line id="10"><marker></marker><content><span class="context-markup xml xsl"><span class="text">  </span><span class="tag open"><span class="begin">&lt;xsl:apply-templates</span> <span class="attribute">select=</span><span class="value">"homepage-articles/entry"</span><span class="end">/&gt;</span></span><span class="text"></span></span></content></line>
+<line id="11"><marker></marker><content><span class="context-markup xml xsl"><span class="text">  </span><span class="tag open"><span class="begin">&lt;xsl:apply-templates</span> <span class="attribute">select=</span><span class="value">"notes"</span><span class="end">/&gt;</span></span><span class="text"></span></span></content></line>
+<line id="12"><marker></marker><content><span class="context-markup xml xsl"><span class="text"></span><span class="tag close">&lt;/xsl:template&gt;</span><span class="text"></span></span></content></line>
+<line id="13"><marker></marker><content><span class="context-markup xml xsl"><span class="text"></span></span></content></line>
+<line id="14"><marker></marker><content><span class="context-markup xml xsl"><span class="text"></span><span class="tag close">&lt;/xsl:stylesheet&gt;</span></span></content></line></pre></div>
+		</div>
+	</body>
+</html>
