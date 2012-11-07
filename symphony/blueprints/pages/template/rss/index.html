@@ -25,7 +25,7 @@
 		<script type="text/javascript" src="../../../../assets/js/symphony.notify.js"></script>
 		<script type="text/javascript" src="../../../../assets/js/symphony.drawer.js"></script>
 		<script type="text/javascript" src="../../../../assets/js/admin.js"></script>
-		<script type="text/javascript">Symphony.Context.add('env', {"page-namespace":"\/blueprints\/pages","0":"template","1":"rss"}); Symphony.Context.add('root', 'http://home/sym/symphony-2');</script>
+		<script type="text/javascript">Symphony.Context.add('env', {"page-namespace":"\/blueprints\/pages","0":"template","1":"rss"}); Symphony.Context.add('root', '/apps/symphony/html');</script>
 		<title>rss.xsl &ndash; Pages &ndash; Symphony</title>
 	</head>
 	<body id="blueprints-pages" class="template rss single">
@@ -118,7 +118,7 @@
 				</ul>
 			</div>
 			<div id="contents">
-				<form action="../../../../blueprints/pages/template/rss/" method="post" class="two columns">
+				<form action="../../../../blueprints/pages/template/rss/index.xml" method="post" class="two columns">
 					<fieldset class="primary column">
 						<label>Body
 							<textarea name="fields[body]" rows="30" cols="80" class="code">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
